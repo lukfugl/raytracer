@@ -72,7 +72,7 @@ public:
 	//	Infomation
 	////////////////////////////////////////////////
 
-	virtual void outputContext(ostream &printStream, char *indentString) = 0;
+	virtual void outputContext(ostream &printStream, const char *indentString) = 0;
 };
 
 #endif

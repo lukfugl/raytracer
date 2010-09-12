@@ -255,7 +255,7 @@ void CylinderSensorNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void CylinderSensorNode::outputContext(ostream &printStream, char *indentString) 
+void CylinderSensorNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *autoOffset = getAutoOffsetField();
 	SFBool *enabled = getEnabledField();

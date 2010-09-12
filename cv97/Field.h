@@ -107,11 +107,11 @@ public:
 		return mType;
 	}
 
-	void setName(char *name) {
+	void setName(const char *name) {
 		mName.setValue(name);
 	}
 
-	char *getName() {
+	const char *getName() {
 		return mName.getValue();
 	}
 

@@ -355,7 +355,7 @@ void ElevationGridNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void ElevationGridNode::outputContext(ostream &printStream, char *indentString) 
+void ElevationGridNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *ccw = getCCWField();
 	SFBool *solid = getSolidField();

@@ -110,7 +110,7 @@ void CoordinateNode::update()
 //	Output
 ////////////////////////////////////////////////
 
-void CoordinateNode::outputContext(ostream &printStream, char *indentString) 
+void CoordinateNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	if (0 < getNPoints()) {
 		MFVec3f *point = getPointField();

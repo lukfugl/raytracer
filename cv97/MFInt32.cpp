@@ -84,7 +84,7 @@ void MFInt32::setValue(int size, int values[])
 //	Output
 ////////////////////////////////////////////////
 
-void MFInt32::outputContext(ostream& printStream, char *indentString) 
+void MFInt32::outputContext(ostream& printStream, const char *indentString) 
 {
 	for (int n=0; n<getSize(); n++) {
 		if (n < getSize()-1)

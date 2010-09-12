@@ -175,7 +175,7 @@ MFString *BackgroundNode::getFrontUrlField()
 	return (MFString *)getExposedField(frontUrlFieldString);
 }
 
-void BackgroundNode::addFrontUrl(char * value)
+void BackgroundNode::addFrontUrl(const char * value)
 {
 	getFrontUrlField()->addValue(value);
 }
@@ -185,7 +185,7 @@ int BackgroundNode::getNFrontUrls()
 	return getFrontUrlField()->getSize();
 }
 
-char * BackgroundNode::getFrontUrl(int index)
+const char * BackgroundNode::getFrontUrl(int index)
 {
 	return getFrontUrlField()->get1Value(index);
 }
@@ -201,7 +201,7 @@ MFString *BackgroundNode::getBackUrlField()
 	return (MFString *)getExposedField(backUrlFieldString);
 }
 
-void BackgroundNode::addBackUrl(char * value)
+void BackgroundNode::addBackUrl(const char * value)
 {
 	getBackUrlField()->addValue(value);
 }
@@ -211,7 +211,7 @@ int BackgroundNode::getNBackUrls()
 	return getBackUrlField()->getSize();
 }
 
-char * BackgroundNode::getBackUrl(int index)
+const char * BackgroundNode::getBackUrl(int index)
 {
 	return getBackUrlField()->get1Value(index);
 }
@@ -227,7 +227,7 @@ MFString *BackgroundNode::getLeftUrlField()
 	return (MFString *)getExposedField(leftUrlFieldString);
 }
 
-void BackgroundNode::addLeftUrl(char * value)
+void BackgroundNode::addLeftUrl(const char * value)
 {
 	getLeftUrlField()->addValue(value);
 }
@@ -237,7 +237,7 @@ int BackgroundNode::getNLeftUrls()
 	return getLeftUrlField()->getSize();
 }
 
-char * BackgroundNode::getLeftUrl(int index)
+const char * BackgroundNode::getLeftUrl(int index)
 {
 	return getLeftUrlField()->get1Value(index);
 }
@@ -253,7 +253,7 @@ MFString *BackgroundNode::getRightUrlField()
 	return (MFString *)getExposedField(rightUrlFieldString);
 }
 
-void BackgroundNode::addRightUrl(char * value)
+void BackgroundNode::addRightUrl(const char * value)
 {
 	getRightUrlField()->addValue(value);
 }
@@ -263,7 +263,7 @@ int BackgroundNode::getNRightUrls()
 	return getRightUrlField()->getSize();
 }
 
-char * BackgroundNode::getRightUrl(int index)
+const char * BackgroundNode::getRightUrl(int index)
 {
 	return getRightUrlField()->get1Value(index);
 }
@@ -279,7 +279,7 @@ MFString *BackgroundNode::getTopUrlField()
 	return (MFString *)getExposedField(topUrlFieldString);
 }
 
-void BackgroundNode::addTopUrl(char * value)
+void BackgroundNode::addTopUrl(const char * value)
 {
 	getTopUrlField()->addValue(value);
 }
@@ -289,7 +289,7 @@ int BackgroundNode::getNTopUrls()
 	return getTopUrlField()->getSize();
 }
 
-char * BackgroundNode::getTopUrl(int index)
+const char * BackgroundNode::getTopUrl(int index)
 {
 	return getTopUrlField()->get1Value(index);
 }
@@ -305,7 +305,7 @@ MFString *BackgroundNode::getBottomUrlField()
 	return (MFString *)getExposedField(bottomUrlFieldString);
 }
 
-void BackgroundNode::addBottomUrl(char * value)
+void BackgroundNode::addBottomUrl(const char * value)
 {
 	getBottomUrlField()->addValue(value);
 }
@@ -315,7 +315,7 @@ int BackgroundNode::getNBottomUrls()
 	return getBottomUrlField()->getSize();
 }
 
-char * BackgroundNode::getBottomUrl(int index)
+const char * BackgroundNode::getBottomUrl(int index)
 {
 	return getBottomUrlField()->get1Value(index);
 }
@@ -355,7 +355,7 @@ void BackgroundNode::update()
 {
 }
 
-void BackgroundNode::outputContext(ostream &printStream, char *indentString)
+void BackgroundNode::outputContext(ostream &printStream, const char *indentString)
 {
 	if (0 < getNGroundColors()){
 		MFColor *groundColor = getGroundColorField();

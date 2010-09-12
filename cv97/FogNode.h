@@ -42,8 +42,8 @@ public:
 
 	SFString *getFogTypeField();
 
-	void setFogType(char *value);
-	char *getFogType();
+	void setFogType(const char *value);
+	const char *getFogType();
 
 	////////////////////////////////////////////////
 	//	VisibilityRange
@@ -74,7 +74,7 @@ public:
 	//	Infomation
 	////////////////////////////////////////////////
 
-	void outputContext(ostream &printStream, char *indentString);
+	void outputContext(ostream &printStream, const char *indentString);
 };
 
 #endif

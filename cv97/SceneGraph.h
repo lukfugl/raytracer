@@ -86,14 +86,14 @@ public:
 
 	int getNAllNodes();
 	int getNNodes();
-	Node *getNodes(char *typeName);
+	Node *getNodes(const char *typeName);
 	Node *getNodes();
 
 	////////////////////////////////////////////////
 	//	find node
 	////////////////////////////////////////////////
 
-	Node *findNode(char *name);
+	Node *findNode(const char *name);
 	bool hasNode(Node *targetNode);
 
 	////////////////////////////////////////////////
@@ -714,7 +714,7 @@ public:
 
 	void clear();
 
-	void load(char *filename, bool bInitialize = true, void (*callbackFn)(int nLine, void *info) = NULL, void *callbackFnInfo = NULL);
+	void load(const char *filename, bool bInitialize = true, void (*callbackFn)(int nLine, void *info) = NULL, void *callbackFnInfo = NULL);
 
 	void add(char *filename, bool bInitialize = true, void (*callbackFn)(int nLine, void *info) = NULL, void *callbackFnInfo = NULL);
 
@@ -730,10 +730,10 @@ public:
 
 #ifdef SUPPORT_URL
 
-	void	setUrl(char *url)				{ mUrl->setUrl(url); }
-	char	*getUrl()						{ return mUrl->getUrl(); }
-	bool	getUrlStream(char *urlStrnig)	{ return mUrl->getStream(urlStrnig); }
-	char	*getUrlOutputFilename()			{ return mUrl->getOutputFilename(); }
+	void	setUrl(const char *url)				{ mUrl->setUrl(url); }
+	const char	*getUrl()						{ return mUrl->getUrl(); }
+	bool	getUrlStream(const char *urlStrnig)	{ return mUrl->getStream(urlStrnig); }
+	const char	*getUrlOutputFilename()			{ return mUrl->getOutputFilename(); }
 	bool	deleteUrlOutputFilename()		{ return mUrl->deleteOutputFilename(); }
 
 #endif

@@ -39,12 +39,12 @@ void Event::InitializeJavaIDs()
 //	Name
 ////////////////////////////////////////////////
 
-void Event::setName(char *name) 
+void Event::setName(const char *name) 
 {
 	mName.setValue(name);
 }
 
-char *Event::getName() 
+const char *Event::getName() 
 {
 	return mName.getValue();
 }

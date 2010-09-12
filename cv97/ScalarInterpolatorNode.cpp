@@ -122,7 +122,7 @@ void ScalarInterpolatorNode::update()
 //	Output
 ////////////////////////////////////////////////
 
-void ScalarInterpolatorNode::outputContext(ostream &printStream, char *indentString) 
+void ScalarInterpolatorNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	if (0 < getNKeys()) {
 		MFFloat *key = getKeyField();

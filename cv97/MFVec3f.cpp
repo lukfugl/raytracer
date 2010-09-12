@@ -108,7 +108,7 @@ void MFVec3f::setValue(int size, float vectors[][3])
 //	Output
 ////////////////////////////////////////////////
 
-void MFVec3f::outputContext(ostream& printStream, char *indentString) 
+void MFVec3f::outputContext(ostream& printStream, const char *indentString) 
 {
 	float value[3];
 	for (int n=0; n<getSize(); n++) {

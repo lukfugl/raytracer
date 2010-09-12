@@ -48,7 +48,7 @@ void RootNode::update()
 //	infomation
 ////////////////////////////////////////////////
 
-void RootNode::outputContext(ostream& printStream, char * indentString)
+void RootNode::outputContext(ostream& printStream, const char * indentString)
 {
 }
 

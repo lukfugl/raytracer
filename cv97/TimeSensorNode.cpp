@@ -239,7 +239,7 @@ void TimeSensorNode::uninitialize()
 {
 }
 
-void TimeSensorNode::outputContext(ostream &printStream, char *indentString) 
+void TimeSensorNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *bEnabled = getEnabledField();
 	SFBool *loop = getLoopField();

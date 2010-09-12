@@ -17,7 +17,7 @@
 
 using namespace std;
 
-FileGIF89a::FileGIF89a(char *fname)
+FileGIF89a::FileGIF89a(const char *fname)
 {
 	globalColorTable = NULL;
 	nImage = 0;
@@ -64,7 +64,7 @@ static bool GetGIF89aImageInfo(FILE *fp, GIF89aImageInfo *info)
 	return true;
 }
 
-bool FileGIF89a::load(char *fname)
+bool FileGIF89a::load(const char *fname)
 {
 	FILE *fp = fopen(fname, "rb");
 	if (!fp)

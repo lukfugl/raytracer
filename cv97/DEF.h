@@ -21,22 +21,22 @@ class DEF : public LinkedListNode<DEF> {
 
 public:
 
-	DEF (char *name, char *string);
+	DEF (const char *name, const char *string);
 	~DEF();
 
 	////////////////////////////////////////////////
 	//	Name
 	////////////////////////////////////////////////
 
-	void setName(char *name);
-	char *getName();
+	void setName(const char *name);
+	const char *getName();
 
 	////////////////////////////////////////////////
 	//	Name
 	////////////////////////////////////////////////
 
-	void setString(char *string);
-	char *getString();
+	void setString(const char *string);
+	const char *getString();
 };
 
 #endif

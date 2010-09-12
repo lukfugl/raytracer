@@ -409,7 +409,7 @@ void IndexedFaceSetNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void IndexedFaceSetNode::outputContext(ostream &printStream, char *indentString) 
+void IndexedFaceSetNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *convex = getConvexField();
 	SFBool *solid = getSolidField();

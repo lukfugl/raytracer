@@ -13,11 +13,11 @@
 SFString::SFString() 
 {
 	setType(fieldTypeSFString);
-	setValue((char *)NULL);
+	setValue((const char *)NULL);
 	InitializeJavaIDs();
 }
 
-SFString::SFString(char *value) 
+SFString::SFString(const char *value) 
 {
 	setType(fieldTypeSFString);
 	setValue(value);
@@ -42,7 +42,7 @@ SFString::~SFString()
 {
 }
 
-void SFString::setValue(char *value) 
+void SFString::setValue(const char *value) 
 {
 	mValue.setValue(value);
 }
@@ -52,7 +52,7 @@ void SFString::setValue(SFString *value)
 	mValue.setValue(value->getValue());
 }
 
-char *SFString::getValue() 
+const char *SFString::getValue() 
 {
 	return mValue.getValue();
 }

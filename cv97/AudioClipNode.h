@@ -42,8 +42,8 @@ public:
 
 	SFString *getDescriptionField();
 
-	void setDescription(char * value);
-	char *getDescription();
+	void setDescription(const char * value);
+	const char *getDescription();
 
 	////////////////////////////////////////////////
 	//	Loop
@@ -108,10 +108,10 @@ public:
 
 	MFString *getUrlField();
 
-	void addUrl(char * value);
+	void addUrl(const char * value);
 	int getNUrls();
-	char *getUrl(int index);
-	void setUrl(int index, char *urlString);
+	const char *getUrl(int index);
+	void setUrl(int index, const char *urlString);
 
 	////////////////////////////////////////////////
 	//	List
@@ -129,7 +129,7 @@ public:
 	void uninitialize();
 	void update();
 
-	void outputContext(ostream &printStream, char *indentString);
+	void outputContext(ostream &printStream, const char *indentString);
 
 	////////////////////////////////////////////////
 	//	Time

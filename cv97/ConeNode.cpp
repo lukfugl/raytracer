@@ -192,7 +192,7 @@ void ConeNode::recomputeBoundingBox()
 //	Infomation
 ////////////////////////////////////////////////
 
-void ConeNode::outputContext(ostream &printStream, char *indentString) 
+void ConeNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *side = getSideField();
 	SFBool *bottom = getBottomField();

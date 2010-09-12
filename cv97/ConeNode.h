@@ -99,7 +99,7 @@ public:
 	//	Infomation
 	////////////////////////////////////////////////
 
-	void outputContext(ostream &printStream, char *indentString);
+	void outputContext(ostream &printStream, const char *indentString);
 };
 
 #endif

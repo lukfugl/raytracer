@@ -77,7 +77,7 @@ void ColorNode::update()
 //	Output
 ////////////////////////////////////////////////
 
-void ColorNode::outputContext(ostream &printStream, char *indentString) 
+void ColorNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	if (0 < getNColors()) { 
 		MFColor *color = getColorField();

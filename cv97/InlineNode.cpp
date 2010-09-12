@@ -35,7 +35,7 @@ MFString *InlineNode::getUrlField()
 	return (MFString *)getExposedField(urlFieldString);
 }
 
-void InlineNode::addUrl(char *value) 
+void InlineNode::addUrl(const char *value) 
 {
 	getUrlField()->addValue(value);
 }
@@ -45,12 +45,12 @@ int InlineNode::getNUrls()
 	return getUrlField()->getSize();
 }
 
-char *InlineNode::getUrl(int index) 
+const char *InlineNode::getUrl(int index) 
 {
 	return getUrlField()->get1Value(index);
 }
 
-void InlineNode::setUrl(int index, char *urlString) 
+void InlineNode::setUrl(int index, const char *urlString) 
 {
 	getUrlField()->set1Value(index, urlString);
 }
@@ -86,7 +86,7 @@ void InlineNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void InlineNode::outputContext(ostream &printStream, char *indentString) 
+void InlineNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	if (0 < getNUrls()) {
 		MFString *url = getUrlField();

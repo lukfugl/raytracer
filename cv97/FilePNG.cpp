@@ -25,7 +25,7 @@ RGBColor24 color2)
 	return false;
 }
 
-FilePNG::FilePNG(char *filename)
+FilePNG::FilePNG(const char *filename)
 {	
 	mImgBuffer = NULL;
 	mWidth = mHeight = 0;
@@ -34,7 +34,7 @@ FilePNG::FilePNG(char *filename)
 	load(filename);
 }
 
-bool FilePNG::load(char *filename)
+bool FilePNG::load(const char *filename)
 {	
 	FILE	*fp;
 	int		n, i, j;

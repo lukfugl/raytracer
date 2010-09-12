@@ -25,7 +25,7 @@ Parser::~Parser()
 //	find node
 ////////////////////////////////////////////////
 
-Node *Parser::findNodeByType(char *typeName) 
+Node *Parser::findNodeByType(const char *typeName) 
 {
 	if (!typeName)
 		return NULL;
@@ -39,7 +39,7 @@ Node *Parser::findNodeByType(char *typeName)
 	return node;
 }
 
-Node *Parser::findNodeByName(char *name) 
+Node *Parser::findNodeByName(const char *name) 
 {
 	if (!name)
 		return NULL;
@@ -57,7 +57,7 @@ Node *Parser::findNodeByName(char *name)
 //	Parser::getNLines
 ////////////////////////////////////////////////
 
-int Parser::getNLines(char *fileName) 
+int Parser::getNLines(const char *fileName) 
 {
 	FILE *fp;
 	if ((fp = fopen(fileName, "rt")) == NULL){
@@ -82,7 +82,7 @@ int Parser::getNLines(char *fileName)
 //	Parser::load
 ////////////////////////////////////////////////
 
-void Parser::load(char *fileName, void (*callbackFn)(int nLine, void *info), void *callbackFnInfo) 
+void Parser::load(const char *fileName, void (*callbackFn)(int nLine, void *info), void *callbackFnInfo) 
 {
 	FILE *fp = fopen(fileName, "rt");
 
@@ -242,10 +242,10 @@ DEF *Parser::getDEFs()
 	return (DEF *)mDEFList.getNodes();
 }
 
-char *Parser::getDEFString(char *name) 
+const char *Parser::getDEFString(const char *name) 
 {
 	for (DEF *def=getDEFs(); def; def=def->next()) {
-		char *defName = def->getName();
+		const char *defName = def->getName();
 		if (defName && !strcmp(defName, name))
 			return def->getString();
 	}
@@ -257,7 +257,7 @@ void Parser::addDEF(DEF *def)
 	mDEFList.addNode(def);
 }
 	
-void Parser::addDEF(char *name, char *string) 
+void Parser::addDEF(const char *name, const char *string) 
 {
 	DEF *def = new DEF(name, string);
 	addDEF(def);
@@ -277,13 +277,13 @@ PROTO *Parser::getPROTOs()
 	return (PROTO *)mPROTOList.getNodes();
 }
 
-PROTO *Parser::getPROTO(char *name) 
+PROTO *Parser::getPROTO(const char *name) 
 {
 	if (!name || !strlen(name))
 		return NULL;
 
 	for (PROTO *proto=getPROTOs(); proto; proto=proto->next()) {
-		char *protoName = proto->getName();
+		const char *protoName = proto->getName();
 		if (protoName && !strcmp(protoName, name))
 			return proto;
 	}
@@ -329,7 +329,7 @@ void Parser::addRoute(Route *route)
 	mRouteList.addNode(route);
 }
 
-Route *Parser::addRoute(char *eventOutNodeName, char *eventOutFieldName, char *eventInNodeName, char *eventInFieldName)
+Route *Parser::addRoute(const char *eventOutNodeName, const char *eventOutFieldName, const char *eventInNodeName, const char *eventInFieldName)
 {
 	Node *eventInNode = findNodeByName(eventInNodeName);
 	Node *eventOutNode = findNodeByName(eventOutNodeName);

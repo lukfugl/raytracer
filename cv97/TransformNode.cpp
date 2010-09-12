@@ -218,7 +218,7 @@ void TransformNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void TransformNode::outputContext(ostream &printStream, char *indentString) 
+void TransformNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	float vec[3];
 	float rot[4];

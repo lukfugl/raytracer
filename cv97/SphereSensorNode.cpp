@@ -180,7 +180,7 @@ void SphereSensorNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void SphereSensorNode::outputContext(ostream &printStream, char *indentString) 
+void SphereSensorNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *autoOffset = getAutoOffsetField();
 	SFBool *enabled = getEnabledField();

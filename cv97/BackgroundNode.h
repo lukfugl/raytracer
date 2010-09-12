@@ -79,9 +79,9 @@ public:
 
 	MFString *getFrontUrlField();
 
-	void addFrontUrl(char *value);
+	void addFrontUrl(const char *value);
 	int getNFrontUrls();
-	char *getFrontUrl(int index);
+	const char *getFrontUrl(int index);
 
 	////////////////////////////////////////////////
 	// backUrl
@@ -89,9 +89,9 @@ public:
 
 	MFString *getBackUrlField();
 
-	void addBackUrl(char *value);
+	void addBackUrl(const char *value);
 	int getNBackUrls();
-	char *getBackUrl(int index);
+	const char *getBackUrl(int index);
 
 	////////////////////////////////////////////////
 	// leftUrl
@@ -99,9 +99,9 @@ public:
 
 	MFString *getLeftUrlField();
 
-	void addLeftUrl(char *value);
+	void addLeftUrl(const char *value);
 	int getNLeftUrls();
-	char *getLeftUrl(int index);
+	const char *getLeftUrl(int index);
 
 	////////////////////////////////////////////////
 	// rightUrl
@@ -109,9 +109,9 @@ public:
 
 	MFString *getRightUrlField();
 
-	void addRightUrl(char *value);
+	void addRightUrl(const char *value);
 	int getNRightUrls();
-	char *getRightUrl(int index);
+	const char *getRightUrl(int index);
 
 	////////////////////////////////////////////////
 	// topUrl
@@ -119,9 +119,9 @@ public:
 
 	MFString *getTopUrlField();
 
-	void addTopUrl(char *value);
+	void addTopUrl(const char *value);
 	int getNTopUrls();
-	char *getTopUrl(int index);
+	const char *getTopUrl(int index);
 
 	////////////////////////////////////////////////
 	// bottomUrl
@@ -129,9 +129,9 @@ public:
 
 	MFString *getBottomUrlField();
 
-	void addBottomUrl(char *value);
+	void addBottomUrl(const char *value);
 	int getNBottomUrls();
-	char *getBottomUrl(int index);
+	const char *getBottomUrl(int index);
 
 	////////////////////////////////////////////////
 	//	List
@@ -148,7 +148,7 @@ public:
 	void initialize();
 	void uninitialize();
 	void update();
-	void outputContext(ostream &printStream, char *indentString);
+	void outputContext(ostream &printStream, const char *indentString);
 };
 
 #endif

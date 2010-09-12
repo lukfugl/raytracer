@@ -60,10 +60,10 @@ public:
 
 	MFString *getStringField();
 
-	void addString(char *value);
+	void addString(const char *value);
 	int getNStrings();
-	char *getString(int index);
-	void setString(int index, char* value);
+	const char *getString(int index);
+	void setString(int index, const char* value);
 
 	////////////////////////////////////////////////
 	// length
@@ -134,7 +134,7 @@ public:
 	//	Stringmation
 	////////////////////////////////////////////////
 
-	void outputContext(ostream &printStream, char *indentString);
+	void outputContext(ostream &printStream, const char *indentString);
 };
 
 #endif

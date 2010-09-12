@@ -124,7 +124,7 @@ void PositionInterpolatorNode::update()
 	sendEvent(getValueField());
 }
 
-void PositionInterpolatorNode::outputContext(ostream &printStream, char *indentString) 
+void PositionInterpolatorNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	if (0 < getNKeys()) {
 		MFFloat *key = getKeyField();

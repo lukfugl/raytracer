@@ -124,7 +124,7 @@ void ColorInterpolatorNode::update()
 	sendEvent(getValueField());
 }
 
-void ColorInterpolatorNode::outputContext(ostream &printStream, char *indentString) 
+void ColorInterpolatorNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	if (0 < getNKeys()) {
 		MFFloat *key = getKeyField();	

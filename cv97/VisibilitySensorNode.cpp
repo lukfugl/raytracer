@@ -169,7 +169,7 @@ void VisibilitySensorNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void VisibilitySensorNode::outputContext(ostream &printStream, char *indentString) 
+void VisibilitySensorNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *enabled = getEnabledField();
 	SFVec3f *center = getCenterField();

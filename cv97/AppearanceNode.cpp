@@ -59,7 +59,7 @@ void AppearanceNode::update()
 {
 }
 
-void AppearanceNode::outputContext(ostream &printStream, char *indentString) 
+void AppearanceNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	MaterialNode *material = getMaterialNodes();
 	if (material != NULL) {

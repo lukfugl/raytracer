@@ -26,14 +26,14 @@ public:
 
 	void InitializeJavaIDs();
 
-	void addValue(char *value);
+	void addValue(const char *value);
 	void addValue(SFString *sfvalue);
 
-	void insertValue(int index, char *value);
+	void insertValue(int index, const char *value);
 
-	char *get1Value(int index);
+	const char *get1Value(int index);
 
-	void set1Value(int index, char *value);
+	void set1Value(int index, const char *value);
 
 	void setValue(MField *mfield);
 	void setValue(MFString *strings);
@@ -43,7 +43,7 @@ public:
 	//	Output
 	////////////////////////////////////////////////
 
-	void outputContext(ostream& printStream, char *indentString);
+	void outputContext(ostream& printStream, const char *indentString);
 
 	////////////////////////////////////////////////
 	//	Java

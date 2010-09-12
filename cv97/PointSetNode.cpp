@@ -75,7 +75,7 @@ void PointSetNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void PointSetNode::outputContext(ostream &printStream, char *indentString) 
+void PointSetNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	ColorNode *color = getColorNodes();
 	if (color != NULL) {

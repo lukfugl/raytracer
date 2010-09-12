@@ -24,7 +24,7 @@ GroupNode::~GroupNode()
 //	Output
 ////////////////////////////////////////////////
 
-void GroupNode::outputContext(ostream &printStream, char *indentString) 
+void GroupNode::outputContext(ostream &printStream, const char *indentString) 
 {
 }
 

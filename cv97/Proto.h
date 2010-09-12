@@ -26,11 +26,11 @@ public:
 	PROTO(char *name, char *string, char *fieldString);
 	~PROTO(void);
 
-	void		setName(char *name);
-	char		*getName(void);
+	void		setName(const char *name);
+	const char		*getName(void);
 
-	void		setString(char *string);
-	char		*getString();
+	void		setString(const char *string);
+	const char		*getString();
 	void		getString(char *returnString);
 
 	void		addDefaultField(Field *field);

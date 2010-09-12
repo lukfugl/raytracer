@@ -76,7 +76,7 @@ void TextureCoordinateNode::update()
 //	Output
 ////////////////////////////////////////////////
 
-void TextureCoordinateNode::outputContext(ostream &printStream, char *indentString) 
+void TextureCoordinateNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	if (0 < getNPoints()) {
 		MFVec2f *point = getPointField();

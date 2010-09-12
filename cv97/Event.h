@@ -42,8 +42,8 @@ public:
 	//	Name
 	////////////////////////////////////////////////
 
-	void setName(char *name);
-	char *getName();
+	void setName(const char *name);
+	const char *getName();
 
 	////////////////////////////////////////////////
 	//	Time

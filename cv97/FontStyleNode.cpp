@@ -93,12 +93,12 @@ SFString *FontStyleNode::getFamilyField()
 	return (SFString *)getField(familyFieldString);
 }
 	
-void FontStyleNode::setFamily(char *value) 
+void FontStyleNode::setFamily(const char *value) 
 {
 	getFamilyField()->setValue(value);
 }
 
-char *FontStyleNode::getFamily() 
+const char *FontStyleNode::getFamily() 
 {
 	return getFamilyField()->getValue();
 }
@@ -114,12 +114,12 @@ SFString *FontStyleNode::getStyleField()
 	return (SFString *)getField(styleFieldString);
 }
 	
-void FontStyleNode::setStyle(char *value) 
+void FontStyleNode::setStyle(const char *value) 
 {
 	getStyleField()->setValue(value);
 }
 
-char *FontStyleNode::getStyle() 
+const char *FontStyleNode::getStyle() 
 {
 	return getStyleField()->getValue();
 }
@@ -135,12 +135,12 @@ SFString *FontStyleNode::getLanguageField()
 	return (SFString *)getField(languageFieldString);
 }
 	
-void FontStyleNode::setLanguage(char *value) 
+void FontStyleNode::setLanguage(const char *value) 
 {
 	getLanguageField()->setValue(value);
 }
 
-char *FontStyleNode::getLanguage() 
+const char *FontStyleNode::getLanguage() 
 {
 	return getLanguageField()->getValue();
 }
@@ -234,7 +234,7 @@ MFString *FontStyleNode::getJustifyField()
 	return (MFString *)getField(justifyFieldString);
 }
 
-void FontStyleNode::addJustify(char *value) 
+void FontStyleNode::addJustify(const char *value) 
 {
 	getJustifyField()->addValue(value);
 }
@@ -244,7 +244,7 @@ int FontStyleNode::getNJustifys()
 	return getJustifyField()->getSize();
 }
 
-char *FontStyleNode::getJustify(int index) 
+const char *FontStyleNode::getJustify(int index) 
 {
 	return getJustifyField()->get1Value(index);
 }
@@ -314,7 +314,7 @@ void FontStyleNode::update()
 //	Justifymation
 ////////////////////////////////////////////////
 
-void FontStyleNode::outputContext(ostream &printStream, char *indentString) 
+void FontStyleNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFString *family = getFamilyField();
 	SFBool *horizontal = getHorizontalField();
@@ -346,7 +346,7 @@ void FontStyleNode::outputContext(ostream &printStream, char *indentString)
 
 int FontStyleNode::getFamilyNumber()
 {
-	char *family = getFamily();
+	const char *family = getFamily();
 
 	if (family == NULL)
 		return FONTSTYLE_FAMILY_SERIF;
@@ -369,7 +369,7 @@ int FontStyleNode::getFamilyNumber()
 
 int FontStyleNode::getStyleNumber()
 {
-	char *style = getStyle();
+	const char *style = getStyle();
 
 	if (style == NULL)
 		return FONTSTYLE_STYLE_PLAIN;

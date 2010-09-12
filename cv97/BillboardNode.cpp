@@ -98,7 +98,7 @@ void BillboardNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void BillboardNode::outputContext(ostream &printStream, char *indentString) 
+void BillboardNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFVec3f *axisOfRotation = getAxisOfRotationField();
 	printStream << indentString << "\t" << "axisOfRotation " << axisOfRotation << endl;

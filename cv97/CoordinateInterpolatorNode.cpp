@@ -128,7 +128,7 @@ void CoordinateInterpolatorNode::update()
 //	Output
 ////////////////////////////////////////////////
 
-void CoordinateInterpolatorNode::outputContext(ostream &printStream, char *indentString) 
+void CoordinateInterpolatorNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	if (0 < getNKeys()) {
 		MFFloat *key = getKeyField();

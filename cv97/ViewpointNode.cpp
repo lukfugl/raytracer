@@ -103,12 +103,12 @@ SFString *ViewpointNode::getDescriptionField()
 	return (SFString *)getField(descriptionFieldString);
 }
 	
-void ViewpointNode::setDescription(char *value) 
+void ViewpointNode::setDescription(const char *value) 
 {
 	getDescriptionField()->setValue(value);
 }
 
-char *ViewpointNode::getDescription() 
+const char *ViewpointNode::getDescription() 
 {
 	return getDescriptionField()->getValue();
 }
@@ -257,7 +257,7 @@ void ViewpointNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void ViewpointNode::outputContext(ostream& printStream, char *indentString) 
+void ViewpointNode::outputContext(ostream& printStream, const char *indentString) 
 {
 	SFVec3f *position = getPositionField();
 	SFRotation *orientation = getOrientationField();

@@ -222,7 +222,7 @@ void Route::update()
 	case fieldTypeSFString :
 		{
 			SFString *fieldOut = (SFString *)eventOutField;
-			char *value = fieldOut->getValue();
+			const char *value = fieldOut->getValue();
 			switch (eventInFieldType) {
 			case fieldTypeSFString :
 				{

@@ -111,7 +111,7 @@ bool LodNode::isChildNodeType(Node *node)
 //	Infomation
 ////////////////////////////////////////////////
 
-void LodNode::outputContext(ostream &printStream, char *indentString) 
+void LodNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFVec3f *center = getCenterField();
 	printStream << indentString << "\t" << "center " << center << endl;

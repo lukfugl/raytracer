@@ -73,10 +73,10 @@ class FileGIF89a : public FileImage {
 	
 public:
 
-	FileGIF89a(char *fname);
+	FileGIF89a(const char *fname);
 	~FileGIF89a();
 
-	bool	load(char *fname);
+	bool	load(const char *fname);
 
 	/////////////////////////////////////
 	//	Header Infomation

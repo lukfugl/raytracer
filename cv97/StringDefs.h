@@ -27,26 +27,27 @@ class  String
 public:
 
 	String();
-	String(char value[]);
-	String(char value[], int offset, int count); 
+	String(const char value[]);
+	String(const char value[], int offset, int count); 
 
 	~String();
 
-	void setValue(char value[]);
-	void setValue(char value[], int offset, int count); 
-	char *getValue();
+	void setValue(const char value[]);
+	void setValue(const char value[], int offset, int count); 
+	const char *getValue();
 	void deleteValue();
 	int length();
 	char charAt(int  index);
-	int compareTo(char *anotherString);
-	int compareToIgnoreCase(char *anotherString);
-	void concat(char *str);
+	int compareTo(const char *anotherString);
+	int compareToIgnoreCase(const char *anotherString);
+	void concat(const char *str);
 	void copyValueOf(char data[]);
 	void copyValueOf(char  data[], int  offset, int count);
-	int regionMatches(int toffset, char *other, int ooffset, int len);
-	int regionMatchesIgnoreCase(int toffset, char *other, int ooffset, int len);
-	int startsWith(char *prefix);
-	int endsWith(char *suffix);
+	int regionMatches(int toffset, const char *other, int ooffset, int len);
+	int regionMatchesIgnoreCase(int toffset, const char *other, int ooffset, int len);
+	int startsWith(const char *prefix);
+	int endsWith(const char *suffix);
+	void replaceCharacter(char old, char replacedment);
 };
 
 #endif

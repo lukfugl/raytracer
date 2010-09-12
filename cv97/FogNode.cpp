@@ -73,12 +73,12 @@ SFString *FogNode::getFogTypeField()
 	return (SFString *)getExposedField(fogTypeFieldString);
 }
 
-void FogNode::setFogType(char *value) 
+void FogNode::setFogType(const char *value) 
 {
 	getFogTypeField()->setValue(value);
 }
 
-char *FogNode::getFogType() 
+const char *FogNode::getFogType() 
 {
 	return getFogTypeField()->getValue();
 }
@@ -143,7 +143,7 @@ void FogNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void FogNode::outputContext(ostream &printStream, char *indentString) 
+void FogNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFColor *color = getColorField();
 	SFString *fogType = getFogTypeField();

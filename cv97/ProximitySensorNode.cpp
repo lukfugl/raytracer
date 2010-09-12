@@ -243,7 +243,7 @@ bool ProximitySensorNode::isChildNodeType(Node *node)
 //	Infomation
 ////////////////////////////////////////////////
 
-void ProximitySensorNode::outputContext(ostream &printStream, char *indentString) 
+void ProximitySensorNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *enabled = getEnabledField();
 	SFVec3f *center = getCenterField();

@@ -26,7 +26,7 @@ METHODDEF(void) ErrorExit(j_common_ptr cinfo)
   (*cinfo->err->output_message) (cinfo);
 }
 
-FileJPEG::FileJPEG(char *filename)
+FileJPEG::FileJPEG(const char *filename)
 {	
 	imgBuffer = NULL;
 	width = height = 0;
@@ -34,7 +34,7 @@ FileJPEG::FileJPEG(char *filename)
 	load(filename);
 }
 
-bool FileJPEG::load(char *filename)
+bool FileJPEG::load(const char *filename)
 {	
 	imgBuffer = NULL;
 	width = height = 0;

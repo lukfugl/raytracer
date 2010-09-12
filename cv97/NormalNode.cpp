@@ -76,7 +76,7 @@ void NormalNode::update()
 //	Output
 ////////////////////////////////////////////////
 
-void NormalNode::outputContext(ostream &printStream, char *indentString) 
+void NormalNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	if (0 < getNVectors()) {
 		MFVec3f *vector = getVectorField();

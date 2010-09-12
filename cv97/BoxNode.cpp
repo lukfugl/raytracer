@@ -117,7 +117,7 @@ void BoxNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void BoxNode::outputContext(ostream &printStream, char *indentString) 
+void BoxNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFVec3f *size = getSizeField();
 	printStream << indentString << "\t" << "size " << size << endl;

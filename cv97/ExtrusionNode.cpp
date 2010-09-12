@@ -425,7 +425,7 @@ void ExtrusionNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void ExtrusionNode::outputContext(ostream &printStream, char *indentString) 
+void ExtrusionNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *beginCap = getBeginCapField();
 	SFBool *endCap = getEndCapField();

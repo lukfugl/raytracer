@@ -108,7 +108,7 @@ void MFRotation::setValue(int size, float rotations[][4])
 //	Output
 ////////////////////////////////////////////////
 
-void MFRotation::outputContext(ostream& printStream, char *indentString) 
+void MFRotation::outputContext(ostream& printStream, const char *indentString) 
 {
 	float value[4];
 	for (int n=0; n<getSize(); n++) {

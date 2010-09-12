@@ -142,7 +142,7 @@ void DirectionalLightNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void DirectionalLightNode::outputContext(ostream &printStream, char *indentString) 
+void DirectionalLightNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *bon = getOnField();
 	SFVec3f *direction = getDirectionField();

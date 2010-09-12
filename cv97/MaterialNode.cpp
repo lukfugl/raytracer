@@ -230,7 +230,7 @@ void MaterialNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void MaterialNode::outputContext(ostream &printStream, char *indentString) 
+void MaterialNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFColor *dcolor = getDiffuseColorField();
 	SFColor *scolor = getSpecularColorField();

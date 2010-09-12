@@ -33,8 +33,8 @@ public:
 
 	SFString *getDescriptionField();
 
-	void	setDescription(char *value);
-	char *getDescription();
+	void	setDescription(const char *value);
+	const char *getDescription();
 
 	////////////////////////////////////////////////
 	// Parameter
@@ -42,9 +42,9 @@ public:
 
 	MFString *getParameterField();
 
-	void	addParameter(char *value);
+	void	addParameter(const char *value);
 	int		getNParameters();
-	char *getParameter(int index);
+	const char *getParameter(int index);
 
 	////////////////////////////////////////////////
 	// Url
@@ -52,10 +52,10 @@ public:
 
 	MFString *getUrlField();
 
-	void	addUrl(char *value);
+	void	addUrl(const char *value);
 	int		getNUrls();
-	char *getUrl(int index);
-	void	setUrl(int index, char *urlString);
+	const char *getUrl(int index);
+	void	setUrl(int index, const char *urlString);
 
 	////////////////////////////////////////////////
 	//	List
@@ -72,7 +72,7 @@ public:
 	void	initialize();
 	void	uninitialize();
 	void	update();
-	void	outputContext(ostream &printStream, char *indentString);
+	void	outputContext(ostream &printStream, const char *indentString);
 
 };
 

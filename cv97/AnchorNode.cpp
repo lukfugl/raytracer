@@ -47,12 +47,12 @@ SFString *AnchorNode::getDescriptionField()
 	return (SFString *)getExposedField(descriptionFieldString);
 }
 
-void AnchorNode::setDescription(char *value) 
+void AnchorNode::setDescription(const char *value) 
 {
 	getDescriptionField()->setValue(value);
 }
 
-char *AnchorNode::getDescription() 
+const char *AnchorNode::getDescription() 
 {
 	return getDescriptionField()->getValue();
 }
@@ -68,7 +68,7 @@ MFString *AnchorNode::getParameterField()
 	return (MFString *)getExposedField(parameterFieldString);
 }
 
-void AnchorNode::addParameter(char *value) 
+void AnchorNode::addParameter(const char *value) 
 {
 	getParameterField()->addValue(value);
 }
@@ -78,7 +78,7 @@ int AnchorNode::getNParameters()
 	return getParameterField()->getSize();
 }
 
-char *AnchorNode::getParameter(int index) 
+const char *AnchorNode::getParameter(int index) 
 {
 	return getParameterField()->get1Value(index);
 }
@@ -94,7 +94,7 @@ MFString *AnchorNode::getUrlField()
 	return (MFString *)getExposedField(urlFieldString);
 }
 
-void AnchorNode::addUrl(char *value) 
+void AnchorNode::addUrl(const char *value) 
 {
 	getUrlField()->addValue(value);
 }
@@ -104,12 +104,12 @@ int AnchorNode::getNUrls()
 	return getUrlField()->getSize();
 }
 
-char *AnchorNode::getUrl(int index) 
+const char *AnchorNode::getUrl(int index) 
 {
 	return getUrlField()->get1Value(index);
 }
 
-void AnchorNode::setUrl(int index, char *urlString) 
+void AnchorNode::setUrl(int index, const char *urlString) 
 {
 	getUrlField()->set1Value(index, urlString);
 }
@@ -152,7 +152,7 @@ void AnchorNode::update()
 {
 }
 
-void AnchorNode::outputContext(ostream &printStream, char *indentString) 
+void AnchorNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFString *description = getDescriptionField();
 	printStream << indentString << "\t" << "description " << description << endl;

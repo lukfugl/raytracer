@@ -77,7 +77,7 @@ MFString *TextNode::getStringField()
 	return (MFString *)getExposedField(stringFieldString);
 }
 
-void TextNode::addString(char *value) 
+void TextNode::addString(const char *value) 
 {
 	getStringField()->addValue(value);
 }
@@ -87,12 +87,12 @@ int TextNode::getNStrings()
 	return getStringField()->getSize();
 }
 
-char *TextNode::getString(int index) 
+const char *TextNode::getString(int index) 
 {
 	return getStringField()->get1Value(index);
 }
 
-void TextNode::setString(int index, char* value) 
+void TextNode::setString(int index, const char* value) 
 {
 	getStringField()->set1Value(index, value);
 }
@@ -192,7 +192,7 @@ int TextNode::getFontStyleStyleNumber()
 //	Stringmation
 ////////////////////////////////////////////////
 
-void TextNode::outputContext(ostream &printStream, char *indentString) 
+void TextNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	printStream << indentString << "\t" << "maxExtent " << getMaxExtent() << endl;
 
@@ -232,7 +232,7 @@ void TextNode::outputContext(ostream &printStream, char *indentString)
 void TextNode::recomputeBoundingBox() 
 {
 	int nStrings = getNStrings();
-	char *string = NULL;
+	const char *string = NULL;
 	if (0 < nStrings) {
 		string = getString(0);
 		if (string != NULL) {

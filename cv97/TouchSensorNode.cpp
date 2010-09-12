@@ -209,7 +209,7 @@ void TouchSensorNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void TouchSensorNode::outputContext(ostream &printStream, char *indentString) 
+void TouchSensorNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *enabled = getEnabledField();
 	printStream << indentString << "\t" << "enabled " << enabled << endl;

@@ -39,8 +39,8 @@ public:
 
 	SFString *getTitleField();
 	
-	void setTitle(char *value);
-	char *getTitle();
+	void setTitle(const char *value);
+	const char *getTitle();
 
 	////////////////////////////////////////////////
 	// Info
@@ -48,9 +48,9 @@ public:
 
 	MFString *getInfoField();
 
-	void addInfo(char *value);
+	void addInfo(const char *value);
 	int getNInfos();
-	char *getInfo(int index);
+	const char *getInfo(int index);
 
 	////////////////////////////////////////////////
 	//	functions
@@ -65,7 +65,7 @@ public:
 	//	Infomation
 	////////////////////////////////////////////////
 
-	void outputContext(ostream& printStream, char *indentString);
+	void outputContext(ostream& printStream, const char *indentString);
 };
 
 #endif

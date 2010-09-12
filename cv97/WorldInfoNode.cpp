@@ -39,12 +39,12 @@ SFString *WorldInfoNode::getTitleField()
 	return (SFString *)getField(titleFieldString);
 }
 	
-void WorldInfoNode::setTitle(char *value) 
+void WorldInfoNode::setTitle(const char *value) 
 {
 	getTitleField()->setValue(value);
 }
 
-char *WorldInfoNode::getTitle() 
+const char *WorldInfoNode::getTitle() 
 {
 	return getTitleField()->getValue();
 }
@@ -60,7 +60,7 @@ MFString *WorldInfoNode::getInfoField()
 	return (MFString *)getField(infoFieldString);
 }
 
-void WorldInfoNode::addInfo(char *value) 
+void WorldInfoNode::addInfo(const char *value) 
 {
 	getInfoField()->addValue(value);
 }
@@ -70,7 +70,7 @@ int WorldInfoNode::getNInfos()
 	return getInfoField()->getSize();
 }
 
-char *WorldInfoNode::getInfo(int index) 
+const char *WorldInfoNode::getInfo(int index) 
 {
 	return getInfoField()->get1Value(index);
 }
@@ -114,7 +114,7 @@ void WorldInfoNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void WorldInfoNode::outputContext(ostream& printStream, char *indentString) 
+void WorldInfoNode::outputContext(ostream& printStream, const char *indentString) 
 {
 	SFString *title = getTitleField();
 	printStream << indentString << "\t" << "title " << title << endl;

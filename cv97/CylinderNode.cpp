@@ -221,7 +221,7 @@ void CylinderNode::recomputeBoundingBox()
 //	Infomation
 ////////////////////////////////////////////////
 
-void CylinderNode::outputContext(ostream &printStream, char *indentString) 
+void CylinderNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *top = getTopField();
 	SFBool *side = getSideField();

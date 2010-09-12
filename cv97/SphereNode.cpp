@@ -110,7 +110,7 @@ void SphereNode::recomputeBoundingBox()
 //	Infomation
 ////////////////////////////////////////////////
 
-void SphereNode::outputContext(ostream &printStream, char *indentString) 
+void SphereNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	printStream << indentString << "\t" << "radius " << getRadius() << endl;
 }

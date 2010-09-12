@@ -34,9 +34,9 @@ public:
 
 	MFString *getTypeField();
 
-	void addType(char *value);
+	void addType(const char *value);
 	int getNTypes();
-	char *getType(int index);
+	const char *getType(int index);
 
 	////////////////////////////////////////////////
 	// avatarSize
@@ -96,7 +96,7 @@ public:
 	//	infomation
 	////////////////////////////////////////////////
 
-	void outputContext(ostream &printStream, char *indentString);
+	void outputContext(ostream &printStream, const char *indentString);
 };
 
 #endif

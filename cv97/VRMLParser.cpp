@@ -28,8 +28,8 @@ char *string)
 	((Parser *)GetParserObject())->addDEF(name, string);
 }
 
-char *GetDEFSrting(
-char *name)
+const char *GetDEFSrting(
+const char *name)
 {
 	return ((Parser *)GetParserObject())->getDEFString(name);
 }
@@ -64,14 +64,14 @@ char *name)
 
 static char	gDEFName[MAX_DEFNAME];
 
-void SetDEFName(char *name)
+void SetDEFName(const char *name)
 {
 	((Parser *)GetParserObject())->setDefName(name);
 }
 
-char *GetDEFName(void)
+const char *GetDEFName(void)
 {
-	char *defName = ((Parser *)GetParserObject())->getDefName();
+	const char *defName = ((Parser *)GetParserObject())->getDefName();
 	if (defName)
 		strcpy(gDEFName, defName);
 	SetDEFName(NULL);

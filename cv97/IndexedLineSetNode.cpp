@@ -197,7 +197,7 @@ void IndexedLineSetNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void IndexedLineSetNode::outputContext(ostream &printStream, char *indentString) 
+void IndexedLineSetNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *colorPerVertex = getColorPerVertexField();
 

@@ -30,10 +30,10 @@ public:
 
 	MFString *getUrlField();
 
-	void addUrl(char *value);
+	void addUrl(const char *value);
 	int getNUrls();
-	char *getUrl(int index);
-	void setUrl(int index, char *urlString);
+	const char *getUrl(int index);
+	void setUrl(int index, const char *urlString);
 
 	////////////////////////////////////////////////
 	//	List
@@ -55,7 +55,7 @@ public:
 	//	Infomation
 	////////////////////////////////////////////////
 
-	void outputContext(ostream &printStream, char *indentString);
+	void outputContext(ostream &printStream, const char *indentString);
 };
 
 #endif

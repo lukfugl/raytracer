@@ -46,7 +46,7 @@ AnchorNode *SceneGraph::findAnchorNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (AnchorNode *node = findAnchorNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -59,7 +59,7 @@ AppearanceNode *SceneGraph::findAppearanceNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (AppearanceNode *node = findAppearanceNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -72,7 +72,7 @@ AudioClipNode *SceneGraph::findAudioClipNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (AudioClipNode *node = findAudioClipNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -85,7 +85,7 @@ BackgroundNode *SceneGraph::findBackgroundNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (BackgroundNode *node = findBackgroundNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -98,7 +98,7 @@ BillboardNode *SceneGraph::findBillboardNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (BillboardNode *node = findBillboardNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -111,7 +111,7 @@ BoxNode *SceneGraph::findBoxNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (BoxNode *node = findBoxNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -124,7 +124,7 @@ CollisionNode *SceneGraph::findCollisionNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (CollisionNode *node = findCollisionNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -137,7 +137,7 @@ ColorNode *SceneGraph::findColorNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (ColorNode *node = findColorNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -150,7 +150,7 @@ ColorInterpolatorNode *SceneGraph::findColorInterpolatorNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (ColorInterpolatorNode *node = findColorInterpolatorNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -163,7 +163,7 @@ ConeNode *SceneGraph::findConeNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (ConeNode *node = findConeNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -176,7 +176,7 @@ CoordinateNode *SceneGraph::findCoordinateNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (CoordinateNode *node = findCoordinateNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -189,7 +189,7 @@ CoordinateInterpolatorNode *SceneGraph::findCoordinateInterpolatorNode(char *nam
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (CoordinateInterpolatorNode *node = findCoordinateInterpolatorNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -202,7 +202,7 @@ CylinderNode *SceneGraph::findCylinderNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (CylinderNode *node = findCylinderNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -215,7 +215,7 @@ CylinderSensorNode *SceneGraph::findCylinderSensorNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (CylinderSensorNode *node = findCylinderSensorNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -228,7 +228,7 @@ DirectionalLightNode *SceneGraph::findDirectionalLightNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (DirectionalLightNode *node = findDirectionalLightNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -241,7 +241,7 @@ ElevationGridNode *SceneGraph::findElevationGridNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (ElevationGridNode *node = findElevationGridNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -254,7 +254,7 @@ ExtrusionNode *SceneGraph::findExtrusionNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (ExtrusionNode *node = findExtrusionNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -267,7 +267,7 @@ FogNode *SceneGraph::findFogNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (FogNode *node = findFogNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -280,7 +280,7 @@ FontStyleNode *SceneGraph::findFontStyleNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (FontStyleNode *node = findFontStyleNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -293,7 +293,7 @@ GroupNode *SceneGraph::findGroupNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (GroupNode *node = findGroupNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -306,7 +306,7 @@ ImageTextureNode *SceneGraph::findImageTextureNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (ImageTextureNode *node = findImageTextureNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -319,7 +319,7 @@ IndexedFaceSetNode *SceneGraph::findIndexedFaceSetNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (IndexedFaceSetNode *node = findIndexedFaceSetNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -332,7 +332,7 @@ IndexedLineSetNode *SceneGraph::findIndexedLineSetNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (IndexedLineSetNode *node = findIndexedLineSetNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -345,7 +345,7 @@ InlineNode *SceneGraph::findInlineNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (InlineNode *node = findInlineNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -358,7 +358,7 @@ LodNode *SceneGraph::findLodNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (LodNode *node = findLodNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -371,7 +371,7 @@ MaterialNode *SceneGraph::findMaterialNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (MaterialNode *node = findMaterialNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -384,7 +384,7 @@ MovieTextureNode *SceneGraph::findMovieTextureNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (MovieTextureNode *node = findMovieTextureNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -397,7 +397,7 @@ NavigationInfoNode *SceneGraph::findNavigationInfoNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (NavigationInfoNode *node = findNavigationInfoNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -410,7 +410,7 @@ NormalNode *SceneGraph::findNormalNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (NormalNode *node = findNormalNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -423,7 +423,7 @@ NormalInterpolatorNode *SceneGraph::findNormalInterpolatorNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (NormalInterpolatorNode *node = findNormalInterpolatorNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -436,7 +436,7 @@ OrientationInterpolatorNode *SceneGraph::findOrientationInterpolatorNode(char *n
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (OrientationInterpolatorNode *node = findOrientationInterpolatorNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -449,7 +449,7 @@ PixelTextureNode *SceneGraph::findPixelTextureNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (PixelTextureNode *node = findPixelTextureNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -462,7 +462,7 @@ PlaneSensorNode *SceneGraph::findPlaneSensorNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (PlaneSensorNode *node = findPlaneSensorNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -475,7 +475,7 @@ PointLightNode *SceneGraph::findPointLightNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (PointLightNode *node = findPointLightNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -488,7 +488,7 @@ PointSetNode *SceneGraph::findPointSetNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (PointSetNode *node = findPointSetNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -501,7 +501,7 @@ PositionInterpolatorNode *SceneGraph::findPositionInterpolatorNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (PositionInterpolatorNode *node = findPositionInterpolatorNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -514,7 +514,7 @@ ProximitySensorNode *SceneGraph::findProximitySensorNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (ProximitySensorNode *node = findProximitySensorNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -527,7 +527,7 @@ ScalarInterpolatorNode *SceneGraph::findScalarInterpolatorNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (ScalarInterpolatorNode *node = findScalarInterpolatorNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -540,7 +540,7 @@ ScriptNode *SceneGraph::findScriptNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (ScriptNode *node = findScriptNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -553,7 +553,7 @@ ShapeNode *SceneGraph::findShapeNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (ShapeNode *node = findShapeNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -566,7 +566,7 @@ SoundNode *SceneGraph::findSoundNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (SoundNode *node = findSoundNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -579,7 +579,7 @@ SphereNode *SceneGraph::findSphereNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (SphereNode *node = findSphereNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -592,7 +592,7 @@ SphereSensorNode *SceneGraph::findSphereSensorNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (SphereSensorNode *node = findSphereSensorNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -605,7 +605,7 @@ SpotLightNode *SceneGraph::findSpotLightNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (SpotLightNode *node = findSpotLightNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -618,7 +618,7 @@ SwitchNode *SceneGraph::findSwitchNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (SwitchNode *node = findSwitchNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -631,7 +631,7 @@ TextNode *SceneGraph::findTextNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (TextNode *node = findTextNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -644,7 +644,7 @@ TextureCoordinateNode *SceneGraph::findTextureCoordinateNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (TextureCoordinateNode *node = findTextureCoordinateNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -657,7 +657,7 @@ TextureTransformNode *SceneGraph::findTextureTransformNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (TextureTransformNode *node = findTextureTransformNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -670,7 +670,7 @@ TimeSensorNode *SceneGraph::findTimeSensorNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (TimeSensorNode *node = findTimeSensorNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -683,7 +683,7 @@ TouchSensorNode *SceneGraph::findTouchSensorNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (TouchSensorNode *node = findTouchSensorNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -696,7 +696,7 @@ TransformNode *SceneGraph::findTransformNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (TransformNode *node = findTransformNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -709,7 +709,7 @@ ViewpointNode *SceneGraph::findViewpointNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (ViewpointNode *node = findViewpointNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -722,7 +722,7 @@ VisibilitySensorNode *SceneGraph::findVisibilitySensorNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (VisibilitySensorNode *node = findVisibilitySensorNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -735,7 +735,7 @@ WorldInfoNode *SceneGraph::findWorldInfoNode(char *name) {
 	if (!name || strlen(name) <= 0)
 		return NULL;
 	for (WorldInfoNode *node = findWorldInfoNode(); node; node = node->nextTraversal()) {
-		char *nodeName = node->getName();
+		const char *nodeName = node->getName();
 		if (nodeName && strlen(nodeName)) {
 			if (!strcmp(name, nodeName))
 				return node;
@@ -828,7 +828,7 @@ int SceneGraph::getNNodes()
 	return nNode;
 }
 
-Node *SceneGraph::getNodes(char *typeName) 
+Node *SceneGraph::getNodes(const char *typeName) 
 {
 	Node *node = Parser::getNodes();
 	if (node == NULL)
@@ -849,7 +849,7 @@ Node *SceneGraph::getNodes()
 //	find node
 ////////////////////////////////////////////////
 
-Node *SceneGraph::findNode(char *name) 
+Node *SceneGraph::findNode(const char *name) 
 {
 	return Parser::findNodeByName(name);
 }
@@ -877,7 +877,7 @@ void SceneGraph::clear()
 //	SceneGraph::load
 ////////////////////////////////////////////////////////////
 
-void SceneGraph::load(char *filename, bool bInitialize, void (*callbackFn)(int nLine, void *info), void *callbackFnInfo)
+void SceneGraph::load(const char *filename, bool bInitialize, void (*callbackFn)(int nLine, void *info), void *callbackFnInfo)
 {
 	clear();
 

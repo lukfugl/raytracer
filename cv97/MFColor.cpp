@@ -108,7 +108,7 @@ void MFColor::setValue(int size, float colors[][3])
 //	Output
 ////////////////////////////////////////////////
 
-void MFColor::outputContext(ostream& printStream, char *indentString) 
+void MFColor::outputContext(ostream& printStream, const char *indentString) 
 {
 	float value[3];
 	for (int n=0; n<getSize(); n++) {

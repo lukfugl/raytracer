@@ -68,8 +68,8 @@ public:
 	
 	SFString *getFamilyField();
 
-	void setFamily(char *value);
-	char *getFamily();
+	void setFamily(const char *value);
+	const char *getFamily();
 	int getFamilyNumber();
 
 	////////////////////////////////////////////////
@@ -78,8 +78,8 @@ public:
 	
 	SFString *getStyleField();
 
-	void setStyle(char *value);
-	char *getStyle();
+	void setStyle(const char *value);
+	const char *getStyle();
 	int getStyleNumber();
 
 	////////////////////////////////////////////////
@@ -88,8 +88,8 @@ public:
 	
 	SFString *getLanguageField();
 
-	void setLanguage(char *value);
-	char *getLanguage();
+	void setLanguage(const char *value);
+	const char *getLanguage();
 
 	////////////////////////////////////////////////
 	//	Horizontal
@@ -127,9 +127,9 @@ public:
 
 	MFString *getJustifyField();
 
-	void addJustify(char *value);
+	void addJustify(const char *value);
 	int getNJustifys();
-	char *getJustify(int index);
+	const char *getJustify(int index);
 
 	////////////////////////////////////////////////
 	//	Spacing
@@ -160,7 +160,7 @@ public:
 	//	Justifymation
 	////////////////////////////////////////////////
 
-	void outputContext(ostream &printStream, char *indentString);
+	void outputContext(ostream &printStream, const char *indentString);
 };
 
 #endif

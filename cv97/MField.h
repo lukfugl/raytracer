@@ -58,9 +58,9 @@ public:
 	char *getValue(char *buffer, int bufferLen);
 
 	virtual void setValue(MField *mfield) = 0;
-	virtual void outputContext(ostream& printStream, char *indentString) = 0;
+	virtual void outputContext(ostream& printStream, const char *indentString) = 0;
 
-	void outputContext(ostream& printStream, char *indentString1, char *indentString2);
+	void outputContext(ostream& printStream, const char *indentString1, const char *indentString2);
 
 	////////////////////////////////////////////////
 	//	Java

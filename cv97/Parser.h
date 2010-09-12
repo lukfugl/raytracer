@@ -70,9 +70,9 @@ public:
 	//	find node
 	////////////////////////////////////////////////
 
-	Node *findNodeByType(char *typeName);
+	Node *findNodeByType(const char *typeName);
 
-	Node *findNodeByName(char *name);
+	Node *findNodeByName(const char *name);
 
 	///////////////////////////////////////////////
 	//	Praser action
@@ -94,11 +94,11 @@ public:
 	//	DEF
 	///////////////////////////////////////////////
 
-	void setDefName(char *name) {
+	void setDefName(const char *name) {
 		mDefName.setValue(name);
 	}
 
-	char *getDefName() {
+	const char *getDefName() {
 		return mDefName.getValue();
 	}
 
@@ -120,17 +120,17 @@ public:
 		return mErrorLineNumber; 
 	}
 
-	void setErrorToken(char *error) {
+	void setErrorToken(const char *error) {
 		mErrorToken.setValue(error); 
 	}
-	char *getErrorToken(void) { 
+	const char *getErrorToken(void) { 
 		return mErrorToken.getValue(); 
 	}
 
-	void setErrorLineString(char *error) { 
+	void setErrorLineString(const char *error) { 
 		mErrorLineString.setValue(error); 
 	}
-	char *getErrorLineString(void) {
+	const char *getErrorLineString(void) {
 		return mErrorLineString.getValue(); 
 	}
 
@@ -141,17 +141,17 @@ public:
 	void	setParseringState(bool state)	{ mbParsering = state; }
 	bool	getParseringState()				{ return mbParsering; }
 
-	int		getNLines(char *fileName);
-	void	load(char *fileName, void (*callbackFn)(int nLine, void *info) = NULL, void *callbackFnInfo = NULL);
+	int		getNLines(const char *fileName);
+	void	load(const char *fileName, void (*callbackFn)(int nLine, void *info) = NULL, void *callbackFnInfo = NULL);
 
 	///////////////////////////////////////////////
 	//	DEF
 	///////////////////////////////////////////////
 
 	DEF *getDEFs();
-	char *getDEFString(char *name);
+	const char *getDEFString(const char *name);
 	void addDEF(DEF *def);
-	void addDEF(char *name, char *string);
+	void addDEF(const char *name, const char *string);
 	void deleteDEFs();
 
 	///////////////////////////////////////////////
@@ -159,7 +159,7 @@ public:
 	///////////////////////////////////////////////
 
 	PROTO *getPROTOs();
-	PROTO *getPROTO(char *name);
+	PROTO *getPROTO(const char *name);
 	void addPROTO(PROTO *proto);
 	void deletePROTOs();
 	
@@ -170,7 +170,7 @@ public:
 	Route *getRoutes();
 	Route *getRoute(Node *eventOutNode, Field *eventOutField, Node *eventInNode, Field *eventInField);
 	void addRoute(Route *route);
-	Route *addRoute(char *eventOutNodeName, char *eventOutFieldName, char *eventInNodeName, char *eventInFieldName);
+	Route *addRoute(const char *eventOutNodeName, const char *eventOutFieldName, const char *eventInNodeName, const char *eventInFieldName);
 	Route *addRoute(Node *eventOutNode, Field *eventOutField, Node *eventInNode, Field *eventInField);
 	void deleteRoute(Node *eventOutNode, Field *eventOutField, Node *eventInNode, Field *eventInField);
 	void deleteRoutes(Node *node);

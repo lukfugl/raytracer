@@ -29,16 +29,16 @@ class SFString : public Field {
 public:
 
 	SFString();
-	SFString(char *value);
+	SFString(const char *value);
 	SFString(SFString *value);
 
 	void InitializeJavaIDs();
 
 	~SFString();
 
-	void setValue(char *value);
+	void setValue(const char *value);
 	void setValue(SFString *value);
-	char *getValue();
+	const char *getValue();
 
 	////////////////////////////////////////////////
 	//	Output

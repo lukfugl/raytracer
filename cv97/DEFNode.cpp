@@ -55,7 +55,7 @@ void DEFNode::update()
 {
 }
 
-void DEFNode::outputContext(ostream &printStream, char *indentString) 
+void DEFNode::outputContext(ostream &printStream, const char *indentString) 
 {
 }
 

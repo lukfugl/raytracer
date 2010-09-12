@@ -23,7 +23,7 @@ void MFString::InitializeJavaIDs()
 #endif
 }
 
-void MFString::addValue(char *value) 
+void MFString::addValue(const char *value) 
 {
 	SFString *sfvalue = new SFString(value);
 	add(sfvalue);
@@ -34,13 +34,13 @@ void MFString::addValue(SFString *sfvalue)
 	add(sfvalue);
 }
 
-void MFString::insertValue(int index, char *value) 
+void MFString::insertValue(int index, const char *value) 
 {
 	SFString *sfvalue = new SFString(value);
 	insert(sfvalue, index);
 }
 
-char *MFString::get1Value(int index) 
+const char *MFString::get1Value(int index) 
 {
 	SFString *sfvalue = (SFString *)getObject(index);
 	if (sfvalue)
@@ -49,7 +49,7 @@ char *MFString::get1Value(int index)
 		return NULL;
 }
 
-void MFString::set1Value(int index, char *value) 
+void MFString::set1Value(int index, const char *value) 
 {
 	SFString *sfvalue = (SFString *)getObject(index);
 	if (sfvalue)
@@ -84,10 +84,10 @@ void MFString::setValue(int size, char *values[])
 //	Output
 ////////////////////////////////////////////////
 
-void MFString::outputContext(ostream& printStream, char *indentString) 
+void MFString::outputContext(ostream& printStream, const char *indentString) 
 {
 	for (int n=0; n<getSize(); n++) {
-		char *value = get1Value(n);
+		const char *value = get1Value(n);
 		if (value) {
 			if (n < getSize()-1)
 				printStream << indentString << "\"" << get1Value(n) << "\"" << "," << endl;

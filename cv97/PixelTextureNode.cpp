@@ -93,7 +93,7 @@ void PixelTextureNode::update()
 //	Imagemation
 ////////////////////////////////////////////////
 
-void PixelTextureNode::outputContext(ostream &printStream, char *indentString) 
+void PixelTextureNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *repeatS = getRepeatSField();
 	SFBool *repeatT = getRepeatTField();

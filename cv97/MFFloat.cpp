@@ -84,7 +84,7 @@ void MFFloat::setValue(int size, float values[])
 //	Output
 ////////////////////////////////////////////////
 
-void MFFloat::outputContext(ostream& printStream, char *indentString) 
+void MFFloat::outputContext(ostream& printStream, const char *indentString) 
 {
 	for (int n=0; n<getSize(); n++) {
 		if (n < getSize()-1)

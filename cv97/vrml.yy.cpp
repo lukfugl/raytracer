@@ -3755,7 +3755,7 @@ int yywrap()
   return 1;
 } 
 
-int yyerror(char *s) 
+int yyerror(const char *s) 
 { 
 	Parser *parser = GetParserObject();
 	parser->setErrorLineNumber(GetCurrentLineNumber());

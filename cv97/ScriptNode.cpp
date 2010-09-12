@@ -114,7 +114,7 @@ MFString *ScriptNode::getUrlField()
 	return (MFString *)getExposedField(urlFieldString);
 }
 
-void ScriptNode::addUrl(char * value) 
+void ScriptNode::addUrl(const char * value) 
 {
 	getUrlField()->addValue(value);
 }
@@ -124,12 +124,12 @@ int ScriptNode::getNUrls()
 	return getUrlField()->getSize();
 }
 
-char *ScriptNode::getUrl(int index) 
+const char *ScriptNode::getUrl(int index) 
 {
 	return getUrlField()->get1Value(index);
 }
 
-void ScriptNode::setUrl(int index, char *urlString) 
+void ScriptNode::setUrl(int index, const char *urlString) 
 {
 	getUrlField()->set1Value(index, urlString);
 }
@@ -165,7 +165,7 @@ void ScriptNode::update()
 //	output
 ////////////////////////////////////////////////
 
-void ScriptNode::outputContext(ostream &printStream, char *indentString) 
+void ScriptNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *directOutput = getDirectOutputField();
 	SFBool *mustEvaluate = getMustEvaluateField();
@@ -193,7 +193,7 @@ void ScriptNode::outputContext(ostream &printStream, char *indentString)
 		if (fieldName.compareTo(directOutputFieldString) != 0 && fieldName.compareTo(mustEvaluateFieldString) != 0) {
 			if (field->getType() == fieldTypeSFNode) {
 				Node	*node = ((SFNode *)field)->getValue();
-				char	*nodeName = NULL;
+				const char	*nodeName = NULL;
 				if (node)
 					nodeName = node->getName();
 				if (nodeName && strlen(nodeName))

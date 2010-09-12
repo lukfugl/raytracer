@@ -200,7 +200,7 @@ void PointLightNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void PointLightNode::outputContext(ostream &printStream, char *indentString) 
+void PointLightNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFColor *color = getColorField();
 	SFVec3f *attenuation = getAttenuationField();

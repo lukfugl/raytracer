@@ -282,7 +282,7 @@ void SpotLightNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void SpotLightNode::outputContext(ostream &printStream, char *indentString) 
+void SpotLightNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *bon = getOnField();
 	SFColor *color = getColorField();

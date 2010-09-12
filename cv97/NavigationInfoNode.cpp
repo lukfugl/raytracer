@@ -55,7 +55,7 @@ MFString *NavigationInfoNode::getTypeField()
 	return (MFString *)getExposedField(typeFieldString);
 }
 
-void NavigationInfoNode::addType(char *value) 
+void NavigationInfoNode::addType(const char *value) 
 {
 	getTypeField()->addValue(value);
 }
@@ -65,7 +65,7 @@ int NavigationInfoNode::getNTypes()
 	return getTypeField()->getSize();
 }
 
-char *NavigationInfoNode::getType(int index) 
+const char *NavigationInfoNode::getType(int index) 
 {
 	return getTypeField()->get1Value(index);
 }
@@ -203,7 +203,7 @@ void NavigationInfoNode::update()
 //	infomation
 ////////////////////////////////////////////////
 
-void NavigationInfoNode::outputContext(ostream &printStream, char *indentString) 
+void NavigationInfoNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *headlight = getHeadlightField();
 

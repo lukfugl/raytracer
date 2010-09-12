@@ -110,25 +110,20 @@ Node::~Node()
 //	Name
 ////////////////////////////////////////////////
 
-void Node::setName(char * name) 
+void Node::setName(const char * name) 
 {
-	String	nodeName(name);
-	char *nameString = nodeName.getValue(); 
-	for (int n=0; n<nodeName.length(); n++) {
-		if (nameString[n] <= 0x20)
-			nameString[n] = '_';
-	}
-	mName->setValue(nameString);
+	mName->setValue(name);
+	mName->replaceCharacter(0x20, '_');
 }
 
-char *Node::getName() 
+const char *Node::getName() 
 {
 	return mName->getValue();
 }
 
 bool Node::hasName() 
 {
-	char *name = getName();
+	const char *name = getName();
 	if (name == NULL)
 		return false;
 	if (strlen(name) <= 0)
@@ -140,12 +135,12 @@ bool Node::hasName()
 //	Type
 ////////////////////////////////////////////////
 
-void Node::setType(char * name) 
+void Node::setType(const char * name) 
 {
 	mType->setValue(name);
 }
 
-char *Node::getType() 
+const char *Node::getType() 
 {
 	return mType->getValue();
 }
@@ -307,7 +302,7 @@ Field *Node::createField(int type)
 //	EventIn
 ////////////////////////////////////////////////
 
-Field *Node::getEventIn(char * fieldString) 
+Field *Node::getEventIn(const char * fieldString) 
 {
 
 	String fieldName(fieldString);
@@ -338,7 +333,7 @@ void Node::addEventIn(Field *field)
 	mEventInField->addElement(field);
 }
 
-void Node::addEventIn(char * name, Field *field) 
+void Node::addEventIn(const char * name, Field *field) 
 {
 	assert(name && strlen(name));
 	assert(!getEventIn(name));
@@ -346,7 +341,7 @@ void Node::addEventIn(char * name, Field *field)
 	mEventInField->addElement(field);
 }
 
-void Node::addEventIn(char * name, int fieldType) 
+void Node::addEventIn(const char * name, int fieldType) 
 {
 	addEventIn(name, createField(fieldType));
 }
@@ -370,7 +365,7 @@ int Node::getEventInNumber(Field *field)
 //	EventOut
 ////////////////////////////////////////////////
 
-Field *Node::getEventOut(char *fieldString) 
+Field *Node::getEventOut(const char *fieldString) 
 {
 
 	String fieldName(fieldString);
@@ -400,7 +395,7 @@ void Node::addEventOut(Field *field)
 	mEventOutField->addElement(field);
 }
 
-void Node::addEventOut(char *name, Field *field) 
+void Node::addEventOut(const char *name, Field *field) 
 {
 	assert(name && strlen(name));
 	assert(!getEventOut(name));
@@ -408,7 +403,7 @@ void Node::addEventOut(char *name, Field *field)
 	mEventOutField->addElement(field);
 }
 
-void Node::addEventOut(char * name, int fieldType) 
+void Node::addEventOut(const char * name, int fieldType) 
 {
 	addEventOut(name, createField(fieldType));
 }
@@ -432,7 +427,7 @@ int Node::getEventOutNumber(Field *field)
 //	ExposedField
 ////////////////////////////////////////////////
 
-Field *Node::getExposedField(char * fieldString) 
+Field *Node::getExposedField(const char * fieldString) 
 {
 	
 	String fieldName(fieldString);
@@ -440,7 +435,7 @@ Field *Node::getExposedField(char * fieldString)
 	int nExposedField = getNExposedFields();
 	for (int n=0; n<nExposedField; n++) {
 		Field *field = getExposedField(n);
-		char *filedName = field->getName();
+		const char *filedName = field->getName();
 		if (fieldName.compareTo(filedName) == 0)
 			return field;
 		if (fieldName.startsWith(eventInStripString) == 0) {
@@ -467,7 +462,7 @@ void Node::addExposedField(Field *field)
 	mExposedField->addElement(field);
 }
 
-void Node::addExposedField(char * name, Field *field) 
+void Node::addExposedField(const char * name, Field *field) 
 {
 	assert(name && strlen(name));
 	assert(!getExposedField(name));
@@ -475,7 +470,7 @@ void Node::addExposedField(char * name, Field *field)
 	mExposedField->addElement(field);
 }
 
-void Node::addExposedField(char * name, int fieldType) 
+void Node::addExposedField(const char * name, int fieldType) 
 {
 	addExposedField(name, createField(fieldType));
 }
@@ -495,7 +490,7 @@ int Node::getExposedFieldNumber(Field *field)
 	return -1;
 }
 
-bool Node::getExposedValue(char *fieldName, int returnType, void *result)
+bool Node::getExposedValue(const char *fieldName, int returnType, void *result)
 {
 	char buff[2048];
 	Field *field = getExposedField(fieldName);
@@ -568,7 +563,7 @@ bool Node::getExposedValue(char *fieldName, int returnType, void *result)
 //	Field
 ////////////////////////////////////////////////
 
-Field *Node::getField(char *fieldString) 
+Field *Node::getField(const char *fieldString) 
 {
 	String fieldName(fieldString);
 
@@ -593,7 +588,7 @@ void Node::addField(Field *field)
 	mField->addElement(field);
 }
 
-void Node::addField(char * name, Field *field) 
+void Node::addField(const char * name, Field *field) 
 {
 	assert(name && strlen(name));
 	assert(!getField(name));
@@ -601,7 +596,7 @@ void Node::addField(char * name, Field *field)
 	mField->addElement(field);
 }
 
-void Node::addField(char * name, int fieldType) 
+void Node::addField(const char * name, int fieldType) 
 {
 	addField(name, createField(fieldType));
 }
@@ -625,7 +620,7 @@ int Node::getFieldNumber(Field *field)
 //	PrivateField
 ////////////////////////////////////////////////
 
-Field *Node::getPrivateField(char *fieldString) 
+Field *Node::getPrivateField(const char *fieldString) 
 {
 		
 	String fieldName(fieldString);
@@ -748,7 +743,7 @@ Node *Node::nextTraversal()
 	return nextNode;
 }
 
-Node *Node::nextTraversalByType(char *typeString) 
+Node *Node::nextTraversalByType(const char *typeString) 
 {
 	if (typeString == NULL)
 		return NULL;
@@ -764,7 +759,7 @@ Node *Node::nextTraversalByType(char *typeString)
 	return NULL;
 }
 
-Node *Node::nextTraversalByName(char *nameString) 
+Node *Node::nextTraversalByName(const char *nameString) 
 {
 	if (nameString == NULL)
 		return NULL;
@@ -789,7 +784,7 @@ Node *Node::next()
 	return LinkedListNode<Node>::next(); 
 }
 
-Node *Node::next(char *typeString) 
+Node *Node::next(const char *typeString) 
 {
 	String type(typeString);
 	for (Node *node = next(); node != NULL; node = node->next()) {
@@ -808,7 +803,7 @@ Node *Node::getChildNodes()
 	return mChildNodes->getNodes();
 }
 
-Node *Node::getChildNode(char *typeString) 
+Node *Node::getChildNode(const char *typeString) 
 {
 
 	String type(typeString);
@@ -910,11 +905,11 @@ void Node::getTransformMatrix(SFMatrix *mxOut)
 // is*
 ////////////////////////////////////////////////
 
-bool Node::isNode(char * nodeType) 
+bool Node::isNode(const char * nodeType) 
 {
 	if (!nodeType)
 		return false;
-	char *nodeString = getType();
+	const char *nodeString = getType();
 	if (!nodeString)
 		return false;
 	if (strcmp(nodeString, nodeType) == 0)
@@ -1044,7 +1039,7 @@ void Node::outputTail(ostream& printStream, char * indentString)
 	printStream << indentString << "}" << endl;
 }
 
-void Node::outputContext(ostream& printStream, char *indentString1, char *indentString2) 
+void Node::outputContext(ostream& printStream, const char *indentString1, const char *indentString2) 
 {
 	char *indentString = new char[strlen(indentString1)+strlen(indentString2)+1];
 	strcpy(indentString, indentString1);

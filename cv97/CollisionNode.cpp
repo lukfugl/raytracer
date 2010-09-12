@@ -119,7 +119,7 @@ void CollisionNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void CollisionNode::outputContext(ostream &printStream, char *indentString) 
+void CollisionNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *collide = getCollideField();
 	printStream << indentString << "\t" << "collide " << collide << endl;

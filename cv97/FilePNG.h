@@ -23,10 +23,10 @@ class FilePNG : public FileImage {
 	RGBColor24	mTransparencyColor;
 public:	
 
-	FilePNG(char *filename);
+	FilePNG(const char *filename);
 	~FilePNG();
 	
-	bool load(char *filename);
+	bool load(const char *filename);
 
 	int getFileType() {
 		return FILETYPE_PNG;

@@ -60,7 +60,7 @@ void SFImage::setValue(MField *mfield)
 //	Output
 ////////////////////////////////////////////////
 
-void SFImage::outputContext(ostream& printStream, char *indentString) 
+void SFImage::outputContext(ostream& printStream, const char *indentString) 
 {
 	int	nOutput = 0;
 	printStream << indentString;

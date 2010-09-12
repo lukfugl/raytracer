@@ -84,7 +84,7 @@ void MFTime::setValue(int size, double values[])
 //	Output
 ////////////////////////////////////////////////
 
-void MFTime::outputContext(ostream& printStream, char *indentString) 
+void MFTime::outputContext(ostream& printStream, const char *indentString) 
 {
 	for (int n=0; n<getSize(); n++) {
 		if (n < getSize()-1)

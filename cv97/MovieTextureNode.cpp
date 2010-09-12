@@ -67,7 +67,7 @@ MFString *MovieTextureNode::getUrlField()
 	return (MFString *)getExposedField(urlFieldString);
 }
 
-void MovieTextureNode::addUrl(char *value) 
+void MovieTextureNode::addUrl(const char *value) 
 {
 	getUrlField()->addValue(value);
 }
@@ -77,12 +77,12 @@ int MovieTextureNode::getNUrls()
 	return getUrlField()->getSize();
 }
 
-char *MovieTextureNode::getUrl(int index) 
+const char *MovieTextureNode::getUrl(int index) 
 {
 	return getUrlField()->get1Value(index);
 }
 
-void MovieTextureNode::setUrl(int index, char *urlString) 
+void MovieTextureNode::setUrl(int index, const char *urlString) 
 {
 	getUrlField()->set1Value(index, urlString);
 }
@@ -267,7 +267,7 @@ void MovieTextureNode::update()
 //	infomation
 ////////////////////////////////////////////////
 
-void MovieTextureNode::outputContext(ostream &printStream, char *indentString) 
+void MovieTextureNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *loop = getLoopField();
 	SFBool *repeatS = getRepeatSField();

@@ -26,10 +26,10 @@ PROTO	*AddPROTOInfo(char *name, char *string, char *fieldString);
 PROTO	*IsPROTOName(char *name);
 
 void	AddDEFInfo(char *name, char *string);
-char	*GetDEFSrting(char *name);
+const char	*GetDEFSrting(const char *name);
 
-void	SetDEFName(char *name);
-char	*GetDEFName(void);
+void	SetDEFName(const char *name);
+const char	*GetDEFName(void);
 
 void	MakeLexerBuffers(int lexBufferSize, int lineBufferSize);
 void	DeleteLexerBuffers(void);

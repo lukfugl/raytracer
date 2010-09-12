@@ -178,7 +178,7 @@ void TextureTransformNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void TextureTransformNode::outputContext(ostream &printStream, char *indentString) 
+void TextureTransformNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFVec2f *translation = getTranslationField();
 	SFVec2f *center = getCenterField();

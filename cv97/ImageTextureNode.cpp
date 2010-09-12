@@ -25,7 +25,7 @@
 //	GetFileType
 ////////////////////////////////////////////////
 
-static int GetFileType(char *filename) 
+static int GetFileType(const char *filename) 
 {
 	FILE *fp = fopen(filename, "rb");
 	if (!fp)	
@@ -102,7 +102,7 @@ MFString *ImageTextureNode::getUrlField()
 	return (MFString *)getExposedField(urlFieldString);
 }
 
-void ImageTextureNode::addUrl(char * value) 
+void ImageTextureNode::addUrl(const char * value) 
 {
 	getUrlField()->addValue(value);
 }
@@ -112,12 +112,12 @@ int ImageTextureNode::getNUrls()
 	return getUrlField()->getSize();
 }
 
-char *ImageTextureNode::getUrl(int index) 
+const char *ImageTextureNode::getUrl(int index) 
 {
 	return getUrlField()->get1Value(index);
 }
 
-void ImageTextureNode::setUrl(int index, char *urlString) 
+void ImageTextureNode::setUrl(int index, const char *urlString) 
 {
 	getUrlField()->set1Value(index, urlString);
 }
@@ -138,7 +138,7 @@ bool ImageTextureNode::createImage()
 	if (getNUrls() <= 0)
 		return false;
 
-	char *filename = getUrl(0);
+	const char *filename = getUrl(0);
 	if (filename == NULL)
 		return false;
 
@@ -287,8 +287,8 @@ void ImageTextureNode::updateTexture()
 void ImageTextureNode::update() 
 {
 	if (0 < getNUrls()) {
-		char *urlFilename = getUrl(0);
-		char *currTexFilename = getCurrentTextureName();
+		const char *urlFilename = getUrl(0);
+		const char *currTexFilename = getCurrentTextureName();
 		
 		if (urlFilename != NULL && currTexFilename != NULL) {
 			if (strcmp(urlFilename, currTexFilename) != 0)
@@ -305,7 +305,7 @@ void ImageTextureNode::update()
 //	infomation
 ////////////////////////////////////////////////
 
-void ImageTextureNode::outputContext(ostream &printStream, char *indentString) 
+void ImageTextureNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *repeatS = getRepeatSField();
 	SFBool *repeatT = getRepeatTField();

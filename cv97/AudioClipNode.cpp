@@ -67,12 +67,12 @@ SFString *AudioClipNode::getDescriptionField()
 	return (SFString *)getExposedField(descriptionFieldString);
 }
 
-void AudioClipNode::setDescription(char * value) 
+void AudioClipNode::setDescription(const char * value) 
 {
 	getDescriptionField()->setValue(value);
 }
 
-char *AudioClipNode::getDescription() 
+const char *AudioClipNode::getDescription() 
 {
 	return getDescriptionField()->getValue();
 }
@@ -229,7 +229,7 @@ MFString *AudioClipNode::getUrlField()
 	return (MFString *)getExposedField(urlFieldString);
 }
 
-void AudioClipNode::addUrl(char * value) 
+void AudioClipNode::addUrl(const char * value) 
 {
 	getUrlField()->addValue(value);
 }
@@ -239,12 +239,12 @@ int AudioClipNode::getNUrls()
 	return getUrlField()->getSize();
 }
 
-char *AudioClipNode::getUrl(int index) 
+const char *AudioClipNode::getUrl(int index) 
 {
 	return getUrlField()->get1Value(index);
 }
 
-void AudioClipNode::setUrl(int index, char *urlString) 
+void AudioClipNode::setUrl(int index, const char *urlString) 
 {
 	getUrlField()->set1Value(index, urlString);
 }
@@ -272,7 +272,7 @@ bool AudioClipNode::isChildNodeType(Node *node)
 	return false;
 }
 
-void AudioClipNode::outputContext(ostream &printStream, char *indentString) 
+void AudioClipNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFString *description = getDescriptionField();
 	printStream << indentString << "\t" << "description " << description << endl;

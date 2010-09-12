@@ -128,7 +128,7 @@ void NormalInterpolatorNode::update()
 //	Output
 ////////////////////////////////////////////////
 
-void NormalInterpolatorNode::outputContext(ostream &printStream, char *indentString) 
+void NormalInterpolatorNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	if (0 < getNKeys()) {
 		MFFloat *key = getKeyField();

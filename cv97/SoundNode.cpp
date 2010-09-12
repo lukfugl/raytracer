@@ -308,7 +308,7 @@ void SoundNode::update() {
 //	Infomation
 ////////////////////////////////////////////////
 
-void SoundNode::outputContext(ostream &printStream, char *indentString) 
+void SoundNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *spatialize = getSpatializeField();
 	SFVec3f *direction = getDirectionField();

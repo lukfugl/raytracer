@@ -75,7 +75,7 @@ void ShapeNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void ShapeNode::outputContext(ostream &printStream, char *indentString) 
+void ShapeNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	AppearanceNode *appearance = getAppearanceNodes();
 	if (appearance != NULL) {

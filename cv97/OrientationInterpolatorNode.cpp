@@ -129,7 +129,7 @@ void OrientationInterpolatorNode::update()
 //	Output
 ////////////////////////////////////////////////
 
-void OrientationInterpolatorNode::outputContext(ostream& printStream, char *indentString) 
+void OrientationInterpolatorNode::outputContext(ostream& printStream, const char *indentString) 
 {
 	if (0 < getNKeys()) {
 		MFFloat *key = getKeyField();

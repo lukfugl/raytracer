@@ -26,7 +26,7 @@ static int GetFieldTypeFromString(char *typeString)
 	return field.getType();
 }	
 
-static bool IsTokenChar(char c, char *tokenChars) 
+static bool IsTokenChar(char c, const char *tokenChars) 
 {
 	if (tokenChars == NULL)
 		return false;
@@ -40,12 +40,12 @@ static bool IsTokenChar(char c, char *tokenChars)
 	return false;
 }
 
-static char *currentStringPos = NULL;
+static const char *currentStringPos = NULL;
 
 static char *GetStringToken(
-char	*string, 
-char	*ignoreToken,
-char	*separatorToken,
+const char	*string, 
+const char	*ignoreToken,
+const char	*separatorToken,
 char	*buffer)
 {
 	if (string == NULL)
@@ -96,22 +96,22 @@ PROTO::~PROTO(void)
 {
 }
 
-void PROTO::setName(char *name)
+void PROTO::setName(const char *name)
 {
 	mName.setValue(name);
 }
 
-char *PROTO::getName(void)
+const char *PROTO::getName(void)
 {
 	return mName.getValue();
 }
 
-void PROTO::setString(char *string) 
+void PROTO::setString(const char *string) 
 {
 	mString.setValue(string);
 }
 
-char *PROTO::getString() 
+const char *PROTO::getString() 
 {
 	return mString.getValue();
 }
@@ -340,7 +340,7 @@ void PROTO::getString(char *returnBuffer)
 
 	returnBuffer[0] = '\0';
 
-	char *string = getString();
+	const char *string = getString();
 	if (!string || !strlen(string))
 		return;
 

@@ -22,10 +22,10 @@ class FileJPEG : public FileImage {
 
 public:	
 
-	FileJPEG(char *filename);
+	FileJPEG(const char *filename);
 	~FileJPEG();
 	
-	bool load(char *filename);
+	bool load(const char *filename);
 
 	int getFileType() {
 		return FILETYPE_JPEG;

@@ -254,7 +254,7 @@ void PlaneSensorNode::update()
 //	Infomation
 ////////////////////////////////////////////////
 
-void PlaneSensorNode::outputContext(ostream &printStream, char *indentString) 
+void PlaneSensorNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	SFBool *autoOffset = getAutoOffsetField();
 	SFBool *enabled = getEnabledField();

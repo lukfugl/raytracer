@@ -97,7 +97,7 @@ void MField::copy(MField *srcMField)
 	}
 }
 
-void MField::outputContext(ostream& printStream, char *indentString1, char *indentString2) 
+void MField::outputContext(ostream& printStream, const char *indentString1, const char *indentString2) 
 {
 	char *indentString = new char[strlen(indentString1)+strlen(indentString2)+1];
 	strcpy(indentString, indentString1);

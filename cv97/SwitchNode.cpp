@@ -79,7 +79,7 @@ bool SwitchNode::isChildNodeType(Node *node)
 //	Infomation
 ////////////////////////////////////////////////
 
-void SwitchNode::outputContext(ostream &printStream, char *indentString) 
+void SwitchNode::outputContext(ostream &printStream, const char *indentString) 
 {
 	printStream << indentString << "\t" << "whichChoice " << getWhichChoice() << endl;
 }

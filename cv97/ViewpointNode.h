@@ -53,8 +53,8 @@ public:
 
 	SFString *getDescriptionField();
 	
-	void setDescription(char *value);
-	char *getDescription();
+	void setDescription(const char *value);
+	const char *getDescription();
 
 	////////////////////////////////////////////////
 	//	Position
@@ -113,7 +113,7 @@ public:
 	//	Infomation
 	////////////////////////////////////////////////
 
-	void outputContext(ostream& printStream, char *indentString);
+	void outputContext(ostream& printStream, const char *indentString);
 
 	////////////////////////////////////////////////
 	//	Local frame

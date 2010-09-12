@@ -255,7 +255,7 @@ char            gName[512];
 
 #define	YYMAXDEPTH	(1024 * 8 * 1000)
 
-int yyerror(char *s);
+int yyerror(const char *s);
 int yyparse(void);
 int yylex(void);
 
@@ -294,7 +294,7 @@ void addFieldAndValue(Node *node, char *fieldName, int fieldType, void *value)
 			break;
 		case fieldTypeSFString:
 			sprintf(buff, "%s", (char*)value);
-			field->setValue((char*) buff);
+			field->setValue(buff);
 			break;
 		case fieldTypeSFInt32:
 			sprintf(buff, "%d", *intVal);
@@ -302,7 +302,7 @@ void addFieldAndValue(Node *node, char *fieldName, int fieldType, void *value)
 			break;
 
 		case fieldTypeSFBool:
-			field->setValue((char*) buff);
+			field->setValue(buff);
 			break;
 	}
 

@@ -132,12 +132,12 @@ public:
 
 	void remove();
 
-	void setName(char * name);
-	char *getName();
+	void setName(const char * name);
+	const char *getName();
 	bool hasName();
 
-	void setType(char * name);
-	char *getType();
+	void setType(const char * name);
+	const char *getType();
 
 	////////////////////////////////////////////////
 	//	Java
@@ -169,11 +169,11 @@ public:
 	//	EventIn
 	////////////////////////////////////////////////
 
-	Field *getEventIn(char * fieldString);
+	Field *getEventIn(const char * fieldString);
 	int getNEventIn();
 	void addEventIn(Field *field);
-	void addEventIn(char * name, Field *field);
-	void addEventIn(char * name, int fieldType);
+	void addEventIn(const char * name, Field *field);
+	void addEventIn(const char * name, int fieldType);
 	Field *getEventIn(int index);
 	int getEventInNumber(Field *field);
 
@@ -181,11 +181,11 @@ public:
 	//	EventOut
 	////////////////////////////////////////////////
 
-	Field *getEventOut(char *fieldString);
+	Field *getEventOut(const char *fieldString);
 	int getNEventOut();
 	void addEventOut(Field *field);
-	void addEventOut(char *name, Field *field);
-	void addEventOut(char * name, int fieldType);
+	void addEventOut(const char *name, Field *field);
+	void addEventOut(const char * name, int fieldType);
 	Field *getEventOut(int index);
 	int getEventOutNumber(Field *field);
 
@@ -193,25 +193,25 @@ public:
 	//	ExposedField
 	////////////////////////////////////////////////
 
-	Field *getExposedField(char * fieldString);
+	Field *getExposedField(const char * fieldString);
 	int getNExposedFields();
 	void addExposedField(Field *field);
-	void addExposedField(char * name, Field *field);
-	void addExposedField(char * name, int fieldType);
+	void addExposedField(const char * name, Field *field);
+	void addExposedField(const char * name, int fieldType);
 	Field *getExposedField(int index);
 	int getExposedFieldNumber(Field *field);
 
-	bool getExposedValue(char *fieldName, int returnType, void *result); 
+	bool getExposedValue(const char *fieldName, int returnType, void *result); 
 
 	////////////////////////////////////////////////
 	//	Field
 	////////////////////////////////////////////////
 
-	Field *getField(char *fieldString);
+	Field *getField(const char *fieldString);
 	int getNFields();
 	void addField(Field *field);
-	void addField(char * name, Field *field);
-	void addField(char * name, int fieldType);
+	void addField(const char * name, Field *field);
+	void addField(const char * name, int fieldType);
 	Field *getField(int index);
 	int getFieldNumber(Field *field);
 
@@ -219,7 +219,7 @@ public:
 	//	PrivateField
 	////////////////////////////////////////////////
 
-	Field *getPrivateField(char *fieldString);
+	Field *getPrivateField(const char *fieldString);
 	int getNPrivateFields();
 	void addPrivateField(Field *field);
 	void addPrivateField(char * name, Field *field);
@@ -249,22 +249,22 @@ public:
 	////////////////////////////////////////////////
 
 	Node *nextTraversal();
-	Node *nextTraversalByType(char *typeString);
-	Node *nextTraversalByName(char *nameString);
+	Node *nextTraversalByType(const char *typeString);
+	Node *nextTraversalByName(const char *nameString);
 
 	////////////////////////////////////////////////
 	//	next node list
 	////////////////////////////////////////////////
 
 	Node *next();
-	Node *next(char *typeString);
+	Node *next(const char *typeString);
 
 	////////////////////////////////////////////////
 	//	child node list
 	////////////////////////////////////////////////
 
 	Node *getChildNodes();
-	Node *getChildNode(char *typeString);
+	Node *getChildNode(const char *typeString);
 	Node *getChildNode(int n);
 	
 	int getNChildNodes();
@@ -518,7 +518,7 @@ public:
 	//	is*
 	////////////////////////////////////////////////
 
-	bool isNode(char * nodeType);
+	bool isNode(const char * nodeType);
 	bool isRootNode();
 	bool isDEFNode();
 	bool isInlineChildNode();
@@ -820,9 +820,9 @@ public:
 
 	void outputTail(ostream& printStream, char * indentString);
 
-	virtual void outputContext(ostream &printStream, char *indentString) = 0;
+	virtual void outputContext(ostream &printStream, const char *indentString) = 0;
 
-	void outputContext(ostream& printStream, char *indentString1, char *indentString2);
+	void outputContext(ostream& printStream, const char *indentString1, const char *indentString2);
 
 	void output(ostream& printStream, int indentLevet);
 
