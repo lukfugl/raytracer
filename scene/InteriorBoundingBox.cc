@@ -5,6 +5,7 @@
 #include <sstream>
 #include <vector>
 #include <assert.h>
+#include <limits>
 
 InteriorBoundingBox::InteriorBoundingBox(const InteriorBoundingBox &ibb) { }
 

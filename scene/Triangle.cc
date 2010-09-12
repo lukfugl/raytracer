@@ -2,6 +2,7 @@
 #include <sstream>
 #include <iostream>
 #include <math.h>
+#include <stdlib.h>
 
 Triangle::Triangle() { }
 

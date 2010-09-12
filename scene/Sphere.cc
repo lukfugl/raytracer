@@ -1,5 +1,6 @@
 #include "Sphere.h"
 #include <sstream>
+#include <math.h>
 
 Sphere::Sphere() { _radius = 0.0; }
 

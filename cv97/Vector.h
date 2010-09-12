@@ -159,7 +159,7 @@ public:
 		setObjectDeleteFlag(delObjFlag);
 	}
 	~VectorElement() { 
-		remove();
+		LinkedListNode<T>::remove();
 		if (mbDelObj)
 			delete mObj;
 	}

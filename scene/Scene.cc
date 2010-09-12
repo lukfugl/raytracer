@@ -6,6 +6,7 @@
 #include <sstream>
 #include <iostream>
 #include <assert.h>
+#include <math.h>
 
 #define JITTER_COUNT 5
 

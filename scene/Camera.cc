@@ -1,6 +1,7 @@
 #include "Camera.h"
 #include "Random.h"
 #include <sstream>
+#include <math.h>
 
 Camera::Camera()
 {
