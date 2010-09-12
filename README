@@ -1,0 +1,7 @@
+Ray tracer created for CS655 at BYU. The code in this folder and the scene/
+subfolder are (c) Jacob Fugal and released under the MIT License (see
+http://www.opensource.org/licenses/mit-license.php). The code in the cv97/
+subfolder is the version of CyberVRML97 available when this code was originally
+written; CyberVRML97 is (c) Satoshi Konno and LGPL licensed (to my knowledge,
+see http://sourceforge.net/projects/cv97cc/). The scenes (*.wrl) in the wrl/
+subfolder are to my knowledge public domain.

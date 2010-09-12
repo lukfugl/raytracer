@@ -1,0 +1,166 @@
+#VRML V2.0 utf8
+
+################################################## VIEWPOINT
+
+Viewpoint {
+  position 0.5 0.5 6.2
+  orientation 1.00000 0.00000 0.00000 0.0
+  fieldOfView 0.670
+    # CUSTOM PARAMS
+    cameraType "rayTracingCamera"
+    imageSize 400 400
+    maxRayDepth 4
+    subsamplingLevel 0
+    attenuationCutoff 0.250
+    maxColorDiff 25
+    gain 1.000
+	fakeCaustics "on"
+}
+
+################################################## BACKGROUND
+
+Background {
+  skyColor 0 0.1 0.1
+}
+
+################################################## LIGHTS
+
+PointLight {
+  location 0.5 1.5 2
+  color 6 6 6
+  intensity 1
+  ambientIntensity 1
+  attenuation 0.000 0.000 1.000
+  jitterRadius 0.1
+}
+
+################################################## OBJECTS
+
+
+Shape {
+appearance Appearance { material Material {
+  diffuseColor 1.000 1.000 1.000
+  emissiveColor 0.000 0.000 0.000
+  specularColor 0.000 0.000 0.000
+  shininess 0.078
+  transparency 0.000
+  ambientIntensity 0.000
+    indexOfRefraction 1.000
+    ambientColor 0.000 0.000 0.000
+    transmissiveColor 0.000 0.000 0.000
+    reflectiveColor 0.000 0.000 0.000
+  }
+  texture ImageTexture {
+    repeatS TRUE
+	repeatT TRUE
+	url "mandrill.ppm"
+  }
+}
+geometry IndexedFaceSet {
+coord Coordinate { point [
+  0 0.1 0
+  1 0.1 0
+  1 1.1 0
+  0 1.1 0
+]}
+texCoord TextureCoordinate { point [
+  0 0
+  1 0
+  1 1
+  0 1
+]}
+coordIndex [
+  0 1 2 -1
+  0 2 3 -1
+]}
+}
+
+##################################################
+
+Shape {
+appearance Appearance { material Material {
+  diffuseColor 0.100 0.10 0.1
+  emissiveColor 0.000 0.000 0.000
+  specularColor 0.500 0.500 0.500
+  shininess 0.1
+  transparency 0.000
+  ambientIntensity 0.000
+    indexOfRefraction 1.000
+    ambientColor 0.000 0.000 0.000
+    transmissiveColor 0.000 0.000 0.000
+    reflectiveColor 0.500 0.500 0.500
+	glossiness 0.03
+  }
+}
+geometry IndexedFaceSet {
+coord Coordinate { point [
+  -20 0 -20
+  20 0 -20
+  20 0 20
+  -20 0 20
+]}
+coordIndex [
+  0 1 2 -1
+  0 2 3 -1
+]}
+}
+
+##################################################
+
+Transform {
+translation -0.1 0.4 1.5
+children [ Shape {
+appearance Appearance { material Material {
+  diffuseColor 0.000 0.000 0.000
+  emissiveColor 0.000 0.000 0.000
+  specularColor 0.9 0.9 0.9
+  shininess 0.9
+  transparency 0.000
+  ambientIntensity 0.000
+    indexOfRefraction 1.700
+    ambientColor 0.000 0.000 0.000
+    transmissiveColor 0.7 0.8 0.7
+    reflectiveColor 0.3 0.3 0.3
+    glossiness 0.0
+	translucency 0.0
+}}
+geometry Sphere { radius 0.4 }
+}]
+}
+
+Transform {
+translation 0.7 0.2 4.3
+children [ Shape {
+appearance Appearance { material Material {
+  diffuseColor 0.000 0.000 0.000
+  emissiveColor 0.000 0.000 0.000
+  specularColor 0.9 0.9 0.9
+  shininess 0.9
+  transparency 0.000
+  ambientIntensity 0.000
+    indexOfRefraction 1.200
+    ambientColor 0.000 0.000 0.000
+    transmissiveColor 0.7 0.8 0.7
+    reflectiveColor 0.3 0.3 0.3
+    glossiness 0.0
+	translucency 0.0
+}}
+geometry Sphere { radius 0.2 }
+}]
+}
+
+Transform {
+translation 0.5 1.7 2.0
+children [ Shape {
+appearance Appearance { material Material {
+  diffuseColor 1.000 1.000 1.000
+  emissiveColor 0.000 0.000 0.000
+  shininess 0.9
+  transparency 0.000
+  ambientIntensity 0.000
+  ambientColor 1 1 1
+}}
+geometry Sphere { radius 0.1 }
+}]
+}
+

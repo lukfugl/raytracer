@@ -1,0 +1,23 @@
+Steps to use this package:
+
+1. Copy tarball into your source directory and untar. This will create the
+subdirectory cv97/ in your source directory (where this file is located).
+
+2. Build the library. The makefile is set up to compile all the .o object files
+then package them into the static package libcv97.a. The rest of this README
+assumes that is what you have done. If you need to build it into some other
+sort of library you're on your own.
+
+3. When linking (assumed in your source directory), add '-Lcv97 -lcv97' to the
+gcc statement. Eg:
+
+g++ -o myProgram myProgram.cc -Lcv97 -lcv97
+
+4. If I also include '-Icv97' in the above gcc statement, I can ignore the
+directory prefix when including SceneGraph.h (or any other necessary .h files
+from cv97/) in myProgram.cc. This is what I do. The corresponding gcc
+statement:
+
+g++ -o myProgram myProgram.cc -Icv97 -Lcv97 -lcv97
+
+5. Enjoy.

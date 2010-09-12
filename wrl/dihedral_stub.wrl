@@ -1,0 +1,53 @@
+#VRML V2.0 utf8
+
+################################################## VIEWPOINT
+
+Viewpoint {
+  position -20.00000 0.00000 43.301270
+  orientation 0.0 1.0 0.0 -0.32360
+  fieldOfView 0.57000
+    # CUSTOM PARAMS
+    cameraType "rayTracingCamera"
+    imageSize 300 300
+    maxRayDepth 3
+    subsamplingLevel 0
+    attenuationCutoff 0.250
+    maxColorDiff 25
+    gain 1.000
+    fakeCaustics "on"
+}
+
+################################################## BACKGROUND
+
+Background {
+  skyColor 0.000 0.100 0.400
+}
+
+################################################## LIGHTS
+
+DirectionalLight {
+  direction -20.0000 -5.0000 -40.0000
+  color 1.0000 1.0000 1.0000
+  intensity 1
+  ambientIntensity 1
+}
+
+################################################## OBJECTS
+
+Shape {
+appearance Appearance { material Material {
+  diffuseColor 1 0.6 0.7
+  ambientIntensity 0.2
+  ambientColor 0.2 0.14 0.14
+}}
+geometry IndexedFaceSet {
+coord Coordinate { point [
+  -12 -12 -5
+   12 -12 -7
+   12  12 -10
+  -12  12 -8
+]}
+coordIndex [ 0 1 2 3 -1 ]
+}
+}
+

@@ -1,0 +1,148 @@
+#VRML V2.0 utf8
+
+################################################## VIEWPOINT
+
+Viewpoint {
+  position 0.00000 0.00000 0.00000
+  orientation 0.12449 -0.94561 0.30055 2.39496
+  fieldOfView 0.50000
+    # CUSTOM PARAMS
+    cameraType "rayTracingCamera"
+    imageSize 256 256
+    maxRayDepth 1
+    subsamplingLevel 0
+    attenuationCutoff 0.250
+    maxColorDiff 25
+    gain 1.000
+}
+
+################################################## BACKGROUND
+
+Background {
+  skyColor 0.000 0.000 1.000
+}
+
+################################################## LIGHTS
+
+DirectionalLight {
+	direction 1 1 1
+	color 1 1 1
+	ambientIntensity 1
+}
+
+################################################## OBJECTS
+
+Transform {
+translation 5.0000 5.0000 5.0000
+children [ Shape {
+appearance Appearance { material Material {
+  diffuseColor 1.000 0.000 0.000
+  emissiveColor 0.000 0.000 0.000
+  specularColor 0.000 0.000 0.000
+  shininess 0.781
+  transparency 0.000
+  ambientIntensity 1.000
+    indexOfRefraction 1.000
+    ambientColor 1.000 0.000 0.000
+    transmissiveColor 0.000 0.000 0.000
+    reflectiveColor 0.000 0.000 0.000
+}}
+geometry Sphere { radius 0.2000 }
+}]
+}
+
+Transform {
+translation 10.0000 10.0000 10.0000
+children [ Shape {
+appearance Appearance { material Material {
+  diffuseColor 1.000 1.000 1.000
+  emissiveColor 0.000 0.000 0.000
+  specularColor 0.000 0.000 0.000
+  shininess 0.781
+  transparency 0.000
+  ambientIntensity 1.000
+    indexOfRefraction 1.000
+    ambientColor 1.000 1.000 1.000
+    transmissiveColor 0.000 0.000 0.000
+    reflectiveColor 0.000 0.000 0.000
+}}
+geometry Sphere { radius 1.0000 }
+}]
+}
+
+Transform {
+translation 20.0000 20.0000 20.0000
+children [ Shape {
+appearance Appearance { material Material {
+  diffuseColor 1.000 0.000 0.000
+  emissiveColor 0.000 0.000 0.000
+  specularColor 0.000 0.000 0.000
+  shininess 0.781
+  transparency 0.000
+  ambientIntensity 1.000
+    indexOfRefraction 1.000
+    ambientColor 1.000 0.000 0.000
+    transmissiveColor 0.000 0.000 0.000
+    reflectiveColor 0.000 0.000 0.000
+}}
+geometry Sphere { radius 3.0000 }
+}]
+}
+
+Transform {
+translation 40.0000 40.0000 40.0000
+children [ Shape {
+appearance Appearance { material Material {
+  diffuseColor 1.000 1.000 1.000
+  emissiveColor 0.000 0.000 0.000
+  specularColor 0.000 0.000 0.000
+  shininess 0.781
+  transparency 0.000
+  ambientIntensity 1.000
+    indexOfRefraction 1.000
+    ambientColor 1.000 1.000 1.000
+    transmissiveColor 0.000 0.000 0.000
+    reflectiveColor 0.000 0.000 0.000
+}}
+geometry Sphere { radius 8.0000 }
+}]
+}
+
+Transform {
+translation 60.0000 60.0000 60.0000
+children [ Shape {
+appearance Appearance { material Material {
+  diffuseColor 1.000 0.000 0.000
+  emissiveColor 0.000 0.000 0.000
+  specularColor 0.000 0.000 0.000
+  shininess 0.781
+  transparency 0.000
+  ambientIntensity 1.000
+    indexOfRefraction 1.000
+    ambientColor 1.000 0.000 0.000
+    transmissiveColor 0.000 0.000 0.000
+    reflectiveColor 0.000 0.000 0.000
+}}
+geometry Sphere { radius 15.0000 }
+}]
+}
+
+Transform {
+translation 80.0000 80.0000 80.0000
+children [ Shape {
+appearance Appearance { material Material {
+  diffuseColor 0.000 0.000 0.000
+  emissiveColor 0.000 0.000 0.000
+  specularColor 0.000 0.000 0.000
+  shininess 0.781
+  transparency 0.000
+  ambientIntensity 0.000
+    indexOfRefraction 1.000
+    ambientColor 0.000 0.000 0.000
+    transmissiveColor 0.000 0.000 0.000
+    reflectiveColor 0.000 0.000 0.000
+}}
+geometry Sphere { radius 21.0000 }
+}]
+}
+
